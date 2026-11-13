@@ -157,6 +157,18 @@ main { position: relative; z-index: 1; }
 .close__line { margin: 0; font-family: var(--sc-font-display); font-size: var(--sc-t-xl); font-weight: 440; }
 .close__foot { color: color-mix(in oklab, var(--sc-ink) 78%, transparent); }
 
+/* ---- reduced motion ---------------------------------------------------------- */
+/* Without motion the sideways rail has nothing to do: pinned, it would hold one
+   still screen for several screens of scrolling with the last can out of view.
+   It becomes an ordinary section with all three cans on show instead. */
+@media (prefers-reduced-motion: reduce) {
+  #range { height: auto !important; }
+  #range [data-sc-stage] { position: relative; height: auto; min-height: 0; overflow: visible; padding-block: var(--sc-section); }
+  .range__rail { flex-wrap: wrap; row-gap: var(--sc-7); width: 100%; max-width: var(--sc-maxw); margin-inline: auto; }
+  .range__lead { width: 100%; }
+  .range__item { width: auto; flex: 1 1 14rem; max-width: 21rem; }
+}
+
 /* ---- motion switched off (footer toggle) ------------------------------------ */
 [data-motion="off"] [data-sc-tilt] { transform: none !important; }
 

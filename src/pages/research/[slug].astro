@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import Blocks from '../../components/research/Blocks.astro';
+import research from '../../data/research.json';
+import '../../styles/inner.css';
+import '../../styles/research.css';
+
+export function getStaticPaths() {
+  const order = research.units.flatMap((u) => u.pages);
+  return order.map((slug, i) => ({
+    params: { slug },
+    props: { page: research.pages[slug], prev: order[i - 1] || null, next: order[i + 1] || null, n: i + 1, total: order.length },
+  }));
+}
+const { page, prev, next } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const title = (slug) => research.pages[slug].title;
+---
+<Base title={`${page.title}. Ar0und research.`} description={`${page.title}: part of the MGMT 210 class research behind Ar0und (${page.unit}).`}>
+  <main id="main" class="page rs">
+    <article class="sc-wrap rs__article">
+      <nav class="rs__crumbs" aria-label="Breadcrumb">
+        <a href={`${base}/research`}>Research</a>
+        <span aria-hidden="true">/</span>
+        <span>{page.unit}</span>
+      </nav>
+      <h1 class="sc-display rs__title">{page.title}</h1>
+      {page.sections.map((s) => (
+        <section class="rs__section"><Blocks blocks={s} /></section>
+      ))}
+      <nav class="rs__pager" aria-label="More research pages">
+        {prev ? (
+          <a class="rs__pager-link" href={`${base}/research/${prev}`}><span>Previous</span>{title(prev)}</a>
+        ) : <span></span>}
+        {next ? (
+          <a class="rs__pager-link rs__pager-link--next" href={`${base}/research/${next}`}><span>Next</span>{title(next)}</a>
+        ) : (
+          <a class="rs__pager-link rs__pager-link--next" href={`${base}/research`}><span>Back to</span>All research</a>
+        )}
+      </nav>
+    </article>
+  </main>
+</Base>

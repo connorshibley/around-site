@@ -1,0 +1,2984 @@
+{
+ "units": [
+  {
+   "title": "Unit 1",
+   "pages": [
+    "our-brand",
+    "competitive-strategy",
+    "ethics-and-social-responsibility",
+    "digital-customer-experience",
+    "social-media-strategy",
+    "strategy-and-measurement"
+   ]
+  },
+  {
+   "title": "Unit 2",
+   "pages": [
+    "target-customers-and-personas",
+    "consumer-decision-process",
+    "consumer-influence",
+    "business-marketing-opportunity",
+    "b2b-buying-process",
+    "buyer-strategy"
+   ]
+  },
+  {
+   "title": "Unit 3",
+   "pages": [
+    "target-market-decision",
+    "marketing-research-challenge",
+    "survey-development",
+    "marketing-decisions-and-measurement"
+   ]
+  }
+ ],
+ "pages": {
+  "our-brand": {
+   "title": "Our Brand",
+   "unit": "Unit 1",
+   "sections": [
+    [
+     {
+      "t": "h3",
+      "text": "Sip Your Way Ar0und"
+     },
+     {
+      "t": "p",
+      "html": "Non-alcoholic canned cocktails, built on various traditional drinks from different parts of the world.",
+      "center": true
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 41,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Who We Are"
+         },
+         {
+          "t": "p",
+          "html": "Ar0und aims to rebuild traditional upscaled cocktails from around the globe. Pre-made, alcohol-free, canned, and sealed, ready for any occasion."
+         }
+        ]
+       },
+       {
+        "fr": 59,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "our-brand-1.webp",
+          "w": 774,
+          "h": 1170,
+          "alt": "Six bar scenes with the Ar0und Japan can beside yuzu gin fizzes: a bartender serving, friends toasting and drinks being poured. Labelled \"Made with AI\".",
+          "shown": 601
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Brand Identity"
+     },
+     {
+      "t": "p",
+      "html": "Creating a new path within the non-alcoholic canned cocktail market, giving more opportunities for individuals wanting a proper ready-to-drink cocktail without the booze."
+     },
+     {
+      "t": "p",
+      "html": "Our primary customers are adults roughly 25–50 years old who enjoy the taste of traditional cocktails and either cannot consume alcohol or want to avoid it."
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Outreach For Non-alcoholic Options:"
+     },
+     {
+      "t": "ul",
+      "items": [
+       "Driving Responsibilities",
+       "In remission",
+       "Religion",
+       "Cutting back on alcohol intake",
+       "Medications"
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Value Proposition"
+     },
+     {
+      "t": "p",
+      "html": "For people who want the experience of a real cocktail in a zero-proof form. Ar0und offers a diverse non-alcoholic drinking experience, creating a new horizon for the ready-to-drink mocktail market."
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Who We're Up Against"
+     },
+     {
+      "t": "table",
+      "head": [
+       "Competitor",
+       "Known For",
+       "How Ar0und differs"
+      ],
+      "rows": [
+       [
+        "Lyre’s",
+        "Non-Alcoholic spirits that replicate classic liquors.",
+        "Lyre recreates the spirit itself. Ar0und is built to be a ready-to-drink cocktail."
+       ],
+       [
+        "Ritual Zero Proof",
+        "Non-Alcoholic spirits that replicate classic liquors.",
+        "Alike Lyre’s, Ritual's goal is to recreate the spirit itself."
+       ],
+       [
+        "Seedlip",
+        "Botanical Non-Alcoholic spirits.",
+        "Seedlip uses botanical origin spirits, Ar0und is a finished beverage not adding or mixing required."
+       ],
+       [
+        "BERO",
+        "Non-Alcoholic Beer",
+        "BERO focuses on a non-alcoholic beer option, as Ar0und targets classic mocktails from different cultures."
+       ]
+      ]
+     }
+    ],
+    [
+     {
+      "t": "img",
+      "file": "our-brand-1.webp",
+      "w": 774,
+      "h": 1170,
+      "alt": "",
+      "shown": 734
+     },
+     {
+      "t": "h2",
+      "text": "Because everyone deserves a drink without the cost."
+     }
+    ]
+   ]
+  },
+  "competitive-strategy": {
+   "title": "Competitive Strategy",
+   "unit": "Unit 1",
+   "sections": [
+    [
+     {
+      "t": "h2",
+      "text": "Competitors: Seedlip, Ritual Zero Proof, Lyre's, BERO"
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "SWOT SYNTHESIS:"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 34,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "<em><strong>Strengths to Overcome:</strong></em> 3 of 4 competitors are now owned by major beverage capital (Diageo owns 2 of these companies), we cannot compete with global distribution and budgets right now."
+         }
+        ]
+       },
+       {
+        "fr": 34,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "<em><strong>Weakness to Exploit:</strong></em> Not many companies own true alcohol free drinks or authentic global drinks. Lyre's is 0.5% ABV, not alcohol free, Ritual is American classics only."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 34,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "<em><strong>Opportunity to Pursue:</strong></em> All four analyses found the same demand shift, people are moderating, not quitting. That is something we can persue."
+         }
+        ]
+       },
+       {
+        "fr": 34,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "<em><strong>Threat to Prepare for:</strong></em> The TTB's 0.5% labeling line plus a 50% aluminum tariff (starting in June 2025) and a separate import tariff raise real cost and compliance pressure."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "BCG/ PRODUCT PORTFOLIO SYNTHESIS"
+     }
+    ],
+    [
+     {
+      "t": "p",
+      "html": "<em><strong>what the portfolios revealed:</strong></em> Every competitor has a hero product, a couple steady sellers, and one that is a shot in the dark."
+     }
+    ],
+    [
+     {
+      "t": "p",
+      "html": "<em><strong>Where they're heavily invested:</strong></em> The bottled gin/wiskey/agave alternative"
+     }
+    ],
+    [
+     {
+      "t": "p",
+      "html": "<em><strong>Crowded/Growing/Underserved:</strong></em> Crowded- Bottled American profile spirits; Growing but unclaimed- Canned ready-to-drink cocktails; Underserved- authentic global flavors"
+     }
+    ],
+    [
+     {
+      "t": "p",
+      "html": "<em><strong>Where should we focus: </strong></em>Canned ready-to-drink cocktails built around authentic global flavors"
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "PESTLE AND STRATEGIC RESPONSE"
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "External factors that matter most:"
+     },
+     {
+      "t": "p",
+      "html": "<em><strong>Social-</strong></em> sober curious, moderation shift"
+     },
+     {
+      "t": "p",
+      "html": "<em><strong>Legal-</strong></em> The 0.5% ABV line separating \"alcohol-free\" from \"non-alcoholic\""
+     }
+    ],
+    [
+     {
+      "t": "p",
+      "html": "<em><strong>Greatest opportunity:</strong></em> convergent sober curious demand shift"
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "STRATEGIC RESPONSE: INSIGHT, OPPORTUNITY, OUR RESPONSE"
+     }
+    ],
+    [
+     {
+      "t": "grid",
+      "head": [
+       "Insight",
+       "Opportunity",
+       "Our response"
+      ],
+      "rows": [
+       [
+        "NA-spirits competitors are capital-backed, defending the bottled-spirit core.",
+        "Nobody owns authentic global recipes or has won canned ready-to-drink.",
+        "Build Ar0ound's flagship around globally inspired canned RTD cocktails."
+       ],
+       [
+        "Lyre's, the most awarded brand in the group, is 0.5% ABV (not truly alcohol free).",
+        "Moderation AND fully-abstinent buyers are underserved by \"non-alcoholic\" claims.",
+        "Formulate &amp; market Ar0und as strictly 0.0% ABV"
+       ],
+       [
+        "A 50% aluminum tariff threatens the canned-format opportunity",
+        "Our best growth format is also the most cost-exposed right now.",
+        "Phase into cans, small batch first, glass as fallback."
+       ]
+      ]
+     }
+    ]
+   ]
+  },
+  "ethics-and-social-responsibility": {
+   "title": "Ethics & Social Responsibilty",
+   "unit": "Unit 1",
+   "sections": [
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 57,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Cultural Responsibility"
+         },
+         {
+          "t": "p",
+          "html": "We understand there may be some ethical questions about Ar0und using recipies from around the world. We aim not to steal these recipies by any means but to simply make them accesable for all, regardless of whether or not they consume alcohol. Our team works one on one with bartenders from each drink's country of origin to create a completely authentic recipie. These partners are longterm relationships that we build and maintain throught the entire process and after. Partners recieve a percentage of profits on top of compenstation for the recipies and credit on the package. As for the cans themselves, we always, make sure the country of origin is on the cover in bold, to give credit where its due."
+         }
+        ]
+       },
+       {
+        "fr": 28,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "ethics-and-social-responsibility-1.webp",
+          "w": 500,
+          "h": 500,
+          "alt": "",
+          "shown": 283
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 57,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Environmental Responsiblity"
+         },
+         {
+          "t": "p",
+          "html": "As Ar0und does create authentic cultural drinks, sometimes the ingredients required to maintain that quality require outsourcing. This importation has an environmental impact that we believe is important to acknowledge. We are very commited to reducing our emmisions from shipping and manufacturing through instead building more sustainable direct trade relationships. Partners will be clearly posted on our site for complete transparancey. We work with distributors to choose the least impactful method of shipping and choose to use only recycled materials for our cans and boxes. While this does contribute to a higher price, we prioritize paying our partners fairly. Typically growers and distributors can see small percentages of the final profit, but we are comitted to changing that norm by prioritizing their cut first and foremost. While this is something we are proud of, we would also like to acknowledge that this effects the price that customers pay. The price reflects our decision to never cut corners or unfairly pay our partners and we hope that those goals are also important to our customers."
+         }
+        ]
+       },
+       {
+        "fr": 28,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "ethics-and-social-responsibility-2.webp",
+          "w": 500,
+          "h": 500,
+          "alt": "",
+          "shown": 283
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 41,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Why It Matters To Us"
+         },
+         {
+          "t": "p",
+          "html": "Ar0und is built on the love our team has for culture and food. We believe that culture should be shared and we hope to encourage people to learn and seek out more culture from the world."
+         }
+        ]
+       },
+       {
+        "fr": 28,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "ethics-and-social-responsibility-3.webp",
+          "w": 500,
+          "h": 500,
+          "alt": "",
+          "shown": 283
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Our Responsibility Beyond The Product"
+     },
+     {
+      "t": "p",
+      "html": "<strong>Our responsibility doesnt end at the drinks, it extends to all the people whose recipies and Ingredients helped make Ar0und possible. Our responsibility is also always to our customers to be transparent and ethical. </strong>"
+     }
+    ]
+   ]
+  },
+  "digital-customer-experience": {
+   "title": "Digital Customer Experience",
+   "unit": "Unit 1",
+   "sections": [
+    [
+     {
+      "t": "img",
+      "file": "our-brand-1.webp",
+      "w": 774,
+      "h": 1170,
+      "alt": "",
+      "shown": 570
+     },
+     {
+      "t": "h2",
+      "text": "Connecting Cultures, One Sip at a Time"
+     },
+     {
+      "t": "p",
+      "html": "<strong>Our digital presence helps our outreach for customers to discover, understand, purchase, and return to.</strong>",
+      "center": true
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Global Research",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "Our brand priorizes cultural beverage exposure; our website should imply that to each and every customer. As we launch new drinks, we add a new region, allowing us to exspand our outreach to new customers engaging with that said product."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Personalization",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "Recommendations will be provided for which can or starter pack, based on occasion or flavors, will be in attachment to every product on our website and packaging."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Interactive Marketing",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "Pasted on every product box will be a QR code that will redirect you to a page with serving tips for garnishes (if desired) and food pairings."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Right-time Marketing",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "Promoting seasonally different products will be a focal point for our brand. The difference in beverage choice between a summer day on the boat or a cozy family holiday gathering is significant. Tying our digital messages to sentimental moments and feelings that many can relate to."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Integrated Marketing",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "We chose to keep our branding to one color scheme, letting people become familiar with our brand. Along with having our QR codes pasted on each piece of our packaging, leading consumers back to our website, where they can return to purchase again and again."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Digital Strategy"
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "User Experience"
+     },
+     {
+      "t": "p",
+      "html": "Most of our purchases will start from our website. Customers will be able to learn quickly about our brand and products from our region map on the website, then diving into each individual product."
+     },
+     {
+      "t": "h3",
+      "text": "Product Offering"
+     },
+     {
+      "t": "p",
+      "html": "With each drink page, there is a location origin, one-line taste description, and flavor profile (sweetness, fizz, herbal notes, etc). We will be including suggestions like \"If you enjoyed ___, try ____!\""
+     },
+     {
+      "t": "h3",
+      "text": "Purchase Experience"
+     },
+     {
+      "t": "p",
+      "html": "Purchase size options including 4, 8, and 12 packs will be available. Including starter packs that include more than one product. As our brand grows on our website and retail liquor stores, we will potentially move to partnering with wholesale brands like amazon and target."
+     },
+     {
+      "t": "h3",
+      "text": "Revenue Maximization"
+     },
+     {
+      "t": "p",
+      "html": "Creating a rewards club, allowing customers to earn points from purchase to save on future purchases. Encouraging the return of customers from the opportunity of saving money over buying from another competitor."
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "What Our Competitors Teach Us"
+     },
+     {
+      "t": "p",
+      "html": "From looking at Lyre's digital presence, the <strong>best</strong> practice to learn from is using a \"frequent sippers club\" and partnerships with Amazon that include free shipping. Allowing many options for customers to save a few bucks over another company that may not offer that. An <strong>opportunity </strong>for Ar0und to capitalize on is the RTD beverage style per region, giving a new accessible perspective to the non-alcoholic beverage market, drawing in new customers that are looking for more."
+     }
+    ]
+   ]
+  },
+  "social-media-strategy": {
+   "title": "Social Media Strategy",
+   "unit": "Unit 1",
+   "sections": [
+    [
+     {
+      "t": "h2",
+      "text": "Primary social media audience"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "Adults of legal drinking age so roughly 21-34 and people who enjoy the taste of alcohol but want a day off of the alcohol, sober curious, people who are moderating, people who have a culture connection to our drink. First and second generation Americans. People who travel and connect to their memories (Vacation time, Abroad, social trend dry Jan, etc)"
+         }
+        ]
+       },
+       {
+        "fr": 26,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "social-media-strategy-1.webp",
+          "w": 404,
+          "h": 303,
+          "alt": "",
+          "shown": 202
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 39,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Content strategy"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Strategy 1:</strong> Each product gets its own launch<br><strong>Strategy 2:</strong> Relevant information and share worthy content<br><strong>Strategy 3:</strong> #SipTheWorld"
+         }
+        ]
+       },
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "social-media-strategy-2.webp",
+          "w": 624,
+          "h": 780,
+          "alt": "Taste Japan campaign poster: the Ar0und Japan can beside a yuzu gin fizz, with Mount Fuji and a torii gate behind. Crisp. Citrusy. Wonderfully Refined.",
+          "shown": 317
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Primary social media objective"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 20,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "social-media-strategy-3.webp",
+          "w": 350,
+          "h": 525,
+          "alt": "",
+          "shown": 150
+         }
+        ]
+       },
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "<strong>Primary: </strong>Increase brand awareness and generate leads<br><strong>Secondary:</strong> Develop market research and customer feedback"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Desired customer actions"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "<strong>Desired Action 1: </strong>Discover new goods and services<br><strong>Desired Action 2: </strong>Conduct Research and share<br><strong>Desired Action 3: </strong>Make final purchase decisions"
+         }
+        ]
+       },
+       {
+        "fr": 20,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "social-media-strategy-4.webp",
+          "w": 360,
+          "h": 240,
+          "alt": "",
+          "shown": 150
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Primary platform(s)"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 27,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "social-media-strategy-5.webp",
+          "w": 412,
+          "h": 412,
+          "alt": "TikTok logo",
+          "shown": 206
+         }
+        ]
+       },
+       {
+        "fr": 55,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "social-media-strategy-6.webp",
+          "w": 774,
+          "h": 439,
+          "alt": "Instagram logo",
+          "href": "https://www.instagram.com/ar0und_na/",
+          "shown": 417
+         }
+        ]
+       },
+       {
+        "fr": 27,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "social-media-strategy-7.webp",
+          "w": 412,
+          "h": 412,
+          "alt": "Facebook logo",
+          "shown": 206
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   ]
+  },
+  "strategy-and-measurement": {
+   "title": "Strategy & Measurement",
+   "unit": "Unit 1",
+   "sections": [
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Key Performance Indicators (KPI)"
+         },
+         {
+          "t": "p",
+          "html": "<strong>#1</strong> Engagement Rate per Post<br><strong>#2 </strong>Clicks to our store per engagement<br><strong>#3</strong> Conversion rate on our store<br><strong>#4 </strong>New followers and sign ups per week<br><strong>#5 </strong>Conversion cost on promoted posts"
+         }
+        ]
+       },
+       {
+        "fr": 26,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "strategy-and-measurement-1.webp",
+          "w": 402,
+          "h": 302,
+          "alt": "",
+          "shown": 201
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 30,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "strategy-and-measurement-2.webp",
+          "w": 454,
+          "h": 303,
+          "alt": "",
+          "shown": 227
+         }
+        ]
+       },
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Strongest Advantage"
+         },
+         {
+          "t": "p",
+          "html": "We are <strong>Authentic</strong>, nobody can copy our ethics and connections. We connect international bartenders to cultures to consumers around the world. Anyone can launch an international line but cannot replicate the relationships we will have."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Biggest Risk"
+         },
+         {
+          "t": "p",
+          "html": "Our strongest advantage is also our biggest risk, we have to be very careful of culture representation we are setting. Also choosing the right bartender partners to launch products with. Bad publicity on the individual is tied to our brand so it's extremely important for us to do a strong background check on partnered individuals"
+         }
+        ]
+       },
+       {
+        "fr": 30,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "strategy-and-measurement-3.webp",
+          "w": 450,
+          "h": 300,
+          "alt": "",
+          "shown": 225
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 20,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "strategy-and-measurement-4.webp",
+          "w": 360,
+          "h": 540,
+          "alt": "",
+          "shown": 150
+         }
+        ]
+       },
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Greatest Opportunity"
+         },
+         {
+          "t": "p",
+          "html": "Entering a growing market trends, Gen Z drinks less alcohol giving space to NA drinks. A shift in marketing people have personal brands and content creators are real jobs"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "#1 Strategic Priority"
+         },
+         {
+          "t": "p",
+          "html": "Launch online through our own store to start visible reviews and visible creators spreading #SipTheWorld. Once we have proven numbers we go to B2B to restaurants and stores"
+         }
+        ]
+       },
+       {
+        "fr": 30,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "strategy-and-measurement-5.webp",
+          "w": 454,
+          "h": 303,
+          "alt": "",
+          "shown": 227
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 20,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "strategy-and-measurement-6.webp",
+          "w": 360,
+          "h": 540,
+          "alt": "",
+          "shown": 150
+         }
+        ]
+       },
+       {
+        "fr": 61,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Our ONE Thing"
+         },
+         {
+          "t": "p",
+          "html": "We want our customers to feel a part of our brand focusing on customer loyalty"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   ]
+  },
+  "target-customers-and-personas": {
+   "title": "Target Customers and Personas",
+   "unit": "Unit 2",
+   "sections": [
+    [
+     {
+      "t": "h2",
+      "text": "The Customer Persona"
+     }
+    ],
+    [
+     {
+      "t": "img",
+      "file": "target-customers-and-personas-1.webp",
+      "w": 1337,
+      "h": 780,
+      "alt": "Customer persona card. Meet Carlos, the travel-minded, alcohol-free explorer. Cut back on drinking to feel better and stay fit, but still loves going out. He wants drinks that taste like the real thing and flavors that remind him of his trips. Age: 25 to 34. Education: Bachelor's. Work: Freelancer. Travel: a few trips a year.",
+      "shown": 484,
+      "narrow": true
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 33,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "<em><strong>He doesn't want a mocktail. He wants an exciting drink that happens to be alcohol-free.</strong></em>"
+         }
+        ]
+       },
+       {
+        "fr": 32,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "Carlos has expendable income and travels a few times a year, usually to cities where he can try street food and local drinks. He loves learning about new cultures and connecting on social media."
+         },
+         {
+          "t": "p",
+          "html": "He cut back on alcohol to feel better in the mornings and stay on top of his health. He still loves going out with friends though and does not want to give up ordering something good while out."
+         }
+        ]
+       },
+       {
+        "fr": 10,
+        "blocks": [
+         {
+          "t": "p",
+          "html": "✈️",
+          "emoji": true
+         },
+         {
+          "t": "p",
+          "html": "🎉",
+          "emoji": true
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "What Carlos Wants:"
+     }
+    ],
+    [
+     {
+      "t": "ol",
+      "items": [
+       "<strong>Well crafted, fully alcohol free mocktails that are not just juice. </strong>",
+       "<strong>To reacreate flavors he tried while traveling or to try new flavors from around the world.</strong>",
+       "<strong>Brands that are interactive, align with his morals and offer something new.</strong>"
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "What hinders that in the current market:"
+     }
+    ],
+    [
+     {
+      "t": "p",
+      "html": "The current availble NA drink options are often too sweet or too bland and many actually do conatin alcohol. Bars treat NA drinks as an afterthought causing carlos to feel left out and frustrated at the limited decisions."
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Behaviors"
+     }
+    ],
+    [
+     {
+      "t": "p",
+      "html": "Carlos scrolls Instagram and TikTok daily and saves recipe and drink videos to try later. He goes out with friends regularly and makes drinks at home on weekends. He shops online, reads reviews on Google and TikTok before trying new products, and shares things he likes on his own accounts."
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 27,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "target-customers-and-personas-2.webp",
+          "w": 400,
+          "h": 400,
+          "alt": "TikTok logo",
+          "shown": 206
+         }
+        ]
+       },
+       {
+        "fr": 27,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "target-customers-and-personas-3.webp",
+          "w": 225,
+          "h": 225,
+          "alt": "Instagram logo",
+          "shown": 206
+         }
+        ]
+       },
+       {
+        "fr": 27,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "target-customers-and-personas-4.webp",
+          "w": 225,
+          "h": 225,
+          "alt": "Google logo",
+          "shown": 206
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 26,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Purchase Priorities"
+         },
+         {
+          "t": "p",
+          "html": "Taste comes first, especially drinks that aren’t overly sweet. After that he looks at ingredient quality, price compared to a regular cocktail, how easy it is to buy, and whether it looks good enough to post."
+         }
+        ]
+       },
+       {
+        "fr": 25,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Barriers"
+         },
+         {
+          "t": "p",
+          "html": "He’s been let down by bland alcohol-free drinks before, so he’s skeptical of new ones. He also thinks many are overpriced for what they are and sometimes wonders why he shouldn’t just order a soda. If a product isn’t easy to find online or in stores near him, he’s unlikely to go looking for it."
+         }
+        ]
+       },
+       {
+        "fr": 26,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Information sources"
+         },
+         {
+          "t": "p",
+          "html": "Instagram and TikTok creators, online reviews, and recommendations from friends he travels with. A recommendation from someone he trusts carries the most weight."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Carlos's Relationship with Ar0und"
+     },
+     {
+      "t": "p",
+      "html": "Carlos doesn’t know Ar0und yet, but he’ll most likely discover it through a creator video or a friend’s post. He’ll choose it over other options if the taste lives up to what’s promised and the brand gives him recipes and travel-inspired flavors. If that happens, he’s the kind of customer who buys again, joins the rewards club, and posts about it."
+     }
+    ]
+   ]
+  },
+  "consumer-decision-process": {
+   "title": "Consumer Decision Process & Journey Map",
+   "unit": "Unit 2",
+   "sections": [
+    [
+     {
+      "t": "img",
+      "file": "consumer-decision-process-1.webp",
+      "w": 1554,
+      "h": 1284,
+      "alt": "Journey map, steps 1 to 3: Carlos's path to Ar0und, from a syrupy mocktail to a loyal follower. The full text is below the image.",
+      "text": [
+       [
+        "h3",
+        "Carlos's path to Ar0und, from a syrupy mocktail to a loyal follower"
+       ],
+       [
+        "step",
+        "01 Recognition",
+        "Carlos gets a syrupy mocktail at a bar, or sees a bartender post about Ar0und online.",
+        "“There has to be something better than this.”",
+        "The in-venue menu, a bartender's social account, a friend's post.",
+        "Give partner bartenders a specific pour story to tell, to offer more of an experience not just a product on the menu."
+       ],
+       [
+        "step",
+        "02 Search",
+        "He looks up the brand and checks which bars nearby carry it.",
+        "“Is this actually different from other NA brands?”",
+        "Website, Instagram, a bar locator.",
+        "A simple bar locator plus a short, specific bartender bio for each drink."
+       ],
+       [
+        "step",
+        "03 Evaluation",
+        "Compares it to NA beer, seltzer, and other mocktails on the menu.",
+        "“Does this taste complex, and is the sourcing story real?”",
+        "Menu description, label copy, in-person recommendation.",
+        "Put the sourcing and royalty specifics on the label itself, not just the website."
+       ]
+      ],
+      "shown": 650
+     },
+     {
+      "t": "img",
+      "file": "consumer-decision-process-2.webp",
+      "w": 675,
+      "h": 780,
+      "alt": "Journey map, steps 4 to 6, and the most important moment of influence. The full text is below the image.",
+      "text": [
+       [
+        "step",
+        "04 Decision",
+        "Picks Ar0und because a bartender they trust vouches for it.",
+        "“I trust this more than an ad.”",
+        "The bartender's in-person pitch, a friend's order.",
+        "Invest in bartender training and incentive, not just shelf placement."
+       ],
+       [
+        "step",
+        "05 Purchase",
+        "Orders it on-premise first, buys a bottle later to recreate it at home.",
+        "“Worth trying once before I buy a whole case.”",
+        "The bar itself, then retail shelf or site.",
+        "A receipt code for a discount on the case after an on-premise order."
+       ],
+       [
+        "step",
+        "06 Post-purchase",
+        "Posts about it, orders it again elsewhere, follows the next collaboration.",
+        "“I want to see what they do next.”",
+        "Social media, new product drops.",
+        "A running series of bartender collaborations so repeat customers keep checking back."
+       ],
+       [
+        "note",
+        "Most important moment of influence: the pour itself",
+        "When a bartender the customer already trusts hands them the drink and tells the specific story behind it in person. That single moment does the work of search, evaluation, and decision at once, which is why the plan leads with on-premise bartender partnerships before retail."
+       ],
+       [
+        "note",
+        "Where and how can our brand most effectively influence the decision: at the bar",
+        "Through the bartender's own recommendation, before the customer ever sees an ad or a retail shelf."
+       ]
+      ],
+      "shown": 650
+     }
+    ]
+   ]
+  },
+  "consumer-influence": {
+   "title": "Consumer Influence",
+   "unit": "Unit 2",
+   "sections": [
+    [
+     {
+      "t": "p",
+      "html": "Below are the influences that matter most, what influences impact Carlos and how Ar0und plans to act"
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "SOCIAL"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "consumer-influence-1.webp",
+          "w": 634,
+          "h": 634,
+          "alt": "",
+          "shown": 317
+         },
+         {
+          "t": "h2",
+          "text": "Opinion Leaders"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Factor:</strong> A trusted voice speaks well about product<br><strong>Customer effect:</strong> Carlos trusts bartender's word and orders based on credentials"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Brand response:</strong> Partner bartenders and creators, they share a story behind each recipe and the bartender would receive a royalty"
+         }
+        ]
+       },
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "consumer-influence-2.webp",
+          "w": 634,
+          "h": 634,
+          "alt": "",
+          "shown": 317
+         },
+         {
+          "t": "h2",
+          "text": "Reference groups"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Factor:</strong> His friend group sets the standard for what counts as a real drink on a night out<br><strong>Customer effect:</strong> He's out with friends. He doesn't want fomo of having a juice when his friends are having cocktails. If he thinks he'll get called out, he might skip ordering or skip the night out.<br><strong>Brand response:</strong> Partner restaurants serve Ar0und in the can with a glass and ice, so his friends see the country in bold, and clearly not a soda. The bold can is easy to share with #SipTheWorld."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "PSYCHOLOGICAL"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "consumer-influence-3.webp",
+          "w": 634,
+          "h": 634,
+          "alt": "",
+          "shown": 317
+         },
+         {
+          "t": "h2",
+          "text": "Attitudes"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Factor:</strong> Has a bad opinion on NA drinks"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Customer effect:</strong> Has had a previous bad experience will make it more difficult to try one"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Brand response:</strong> Win him over by providing one at the bar through our trusted partners. Rely on our partners."
+         }
+        ]
+       },
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "consumer-influence-4.webp",
+          "w": 634,
+          "h": 634,
+          "alt": "",
+          "shown": 317
+         },
+         {
+          "t": "h2",
+          "text": "Self-Concept"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Factor:</strong> How he sees himself and how he thinks others see him<br><strong>Customer effect:</strong> He sees himself as someone who orders something good when he goes out and not just juice"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Brand response:</strong> Pitch our drinks on taste first and alcohol-free second so it doesn't feel like a substitute"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "SITUATIONAL"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "consumer-influence-5.webp",
+          "w": 634,
+          "h": 634,
+          "alt": "",
+          "shown": 317
+         },
+         {
+          "t": "h2",
+          "text": "Physical Surroundings"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Factor:</strong> The setting where he buys, the bar, its menu<br><strong>Customer effect:</strong> Bar treats NA as backup choice with limited options. He's confused by limited options looks for alternatives<br><strong>Brand response:</strong> Partner restaurants carry Ar0und as if it was a cocktail and list it with the cocktails, one line per country, marked 0.0%, not with the sodas."
+         }
+        ]
+       },
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "consumer-influence-6.webp",
+          "w": 634,
+          "h": 634,
+          "alt": "",
+          "shown": 317
+         },
+         {
+          "t": "h2",
+          "text": "Social Surroundings"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Factor:</strong> Who's around when he orders, especially a bartender who knows him<br><strong>Customer effect:</strong> The bartender knows his order, so he doesn't have to ask for the non-alcoholic option or explain himself in front of his friends"
+         },
+         {
+          "t": "p",
+          "html": "<strong>Brand response:</strong> Partner bartenders get to know their regulars and have his Ar0und ready, so it shows up without him having to ask."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "HIGH OR LOW INVOLVEMENT?"
+     },
+     {
+      "t": "p",
+      "html": "<strong>Low involvement, but not automatic:</strong> limited problem solving. Carlos knows NA drinks but doesn't know Ar0und yet. He's skeptical, he thinks many NA drinks are overpriced, and his friends see what he orders, so it isn't automatic. One drink at the bar on a bartender's word lowers the risk, and after some good experiences, ordering it becomes routine. Our job is to make the first one low risk and easy to access."
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "BUILDING ON UNIT 1 AND OUR STRATEGY"
+     },
+     {
+      "t": "p",
+      "html": "Unit 1 we planned to launch through our own online store first. Our Unit 2 we moved to the bar, where a trusted bartender does what an ad can't. They can give in person storytelling and customer relationship. The store, the points rewards club and #SipTheWorld are the repeat purchase."
+     }
+    ]
+   ]
+  },
+  "business-marketing-opportunity": {
+   "title": "Business Marketing Opportunity",
+   "unit": "Unit 2",
+   "sections": [
+    [
+     {
+      "t": "h2",
+      "text": "Type of Organization We Want to Sell to:"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "business-marketing-opportunity-1.webp",
+          "w": 547,
+          "h": 365,
+          "alt": "",
+          "shown": 317
+         },
+         {
+          "t": "p",
+          "html": "Causal Upcale Restaurants",
+          "center": true
+         }
+        ]
+       },
+       {
+        "fr": 42,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "business-marketing-opportunity-2.webp",
+          "w": 634,
+          "h": 356,
+          "alt": "",
+          "shown": 317
+         },
+         {
+          "t": "p",
+          "html": "Grocery Stores with Non-Alcoholic Sections",
+          "center": true
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Why Our Product:",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "Its not just another mocktail, it's got real flavor built around a story. It fits right in on a cocktail menue and can be priced like one, without anyone having to spend hours developing a zero-proof recipe from scratch."
+       },
+       {
+        "t": "p",
+        "html": "Grocery stores are interested because non-alcoholic cocktails are a fast growing drink right now, and next to the plain seltzer or basic mixers Ar0und stands out."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "How is it Different:",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "A restaurant or grocery store is buying cases because their customers want it, they arent the ones drinking it. And its not an impulse buy on their end, they're going to taste it, compare to other options, and talk through pricing before committing to anything."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "What Makes it a Business Market:",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "Way fewer buyers than individual customers, but each one orders a lot more at once. The demand only exists because it is tied to someone else wanting it further down the line. A restaurant doesn't want Ar0und for itself, it wants it because diners are asking for it. And once it's on the menu or the shelf, that's not a one time sale, it turns into an actual relationship you have to keep up."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "What Kind of Purchase is it:",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "The first order is risky for them since they've never carried the brand before, so it would be a new buy. Once it's actually selling, reordering becomes easy and routine. If down the line they want to switch up flavors or order size, that's a modified rebuy."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "What We Bring to the Table:",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "For a restaurant, it means no recipe testing and the same quality every single time."
+       },
+       {
+        "t": "p",
+        "html": "For a grocery store, it's a product that's already proven to sell well in a category that's taking off, so there's a lot less guesswork involved."
+       }
+      ]
+     }
+    ]
+   ]
+  },
+  "b2b-buying-process": {
+   "title": "B2B Buying Process and Buying Center",
+   "unit": "Unit 2",
+   "sections": [
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 32,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "1. Problem Recognition"
+         },
+         {
+          "t": "p",
+          "html": "Diners start asking for something better than soda, or shoppers wonder why there's nothing like this on the shelf."
+         }
+        ]
+       },
+       {
+        "fr": 32,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "2. General Need Description"
+         },
+         {
+          "t": "p",
+          "html": "The chef or category manager realizes they actually need a couple solid zero-proof options, not just another mixer"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 32,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "3. Product Specification"
+         },
+         {
+          "t": "p",
+          "html": "Has to be 0.0% ABV certified, sold in cases of 12, able to sit on a shelf for at least nine months, and come in a few different flavors."
+         }
+        ]
+       },
+       {
+        "fr": 32,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "4. Supplier Search"
+         },
+         {
+          "t": "p",
+          "html": "The purchasing manager checks out Ar0und along with a couple other non-alcoholic brands."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 32,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "5. Proposal Solicitation"
+         },
+         {
+          "t": "p",
+          "html": "Ar0und's sales rep follows up with pricing and sends over samples so they can actually taste it first."
+         }
+        ]
+       },
+       {
+        "fr": 32,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "6. Supplier Selection"
+         },
+         {
+          "t": "p",
+          "html": "Mexico and Japan end up testing the best, so those get picked, starting with a 90-day trial instead of committing fully."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "7. Performance Review"
+     },
+     {
+      "t": "p",
+      "html": "After those 90 days, they look at how it actually did and decide whether to keep ordering, tweak things, or drop it."
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 54,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "User-"
+         },
+         {
+          "t": "ul",
+          "items": [
+           "Cares about: how easy it is to deal with day to day",
+           "Objections: worried it'll be awkward to pour or stack",
+           "Needs to know: that it's simple to handle, plus hearing customers actually like it",
+           "How we reach them: keep it simple, show it's easy to serve or stock"
+          ]
+         }
+        ]
+       },
+       {
+        "fr": 16,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "b2b-buying-process-1.webp",
+          "w": 360,
+          "h": 360,
+          "alt": "",
+          "shown": 120
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 54,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Influencer-"
+         },
+         {
+          "t": "ul",
+          "items": [
+           "Cares about: whether it actually fits what they've already built",
+           "Objections: worried a canned drink feels like cutting corners compared to what they've made themselves",
+           "Needs to know: specifically how Ar0und adds to what they're already doing instead of competing with it",
+           "How we reach them: show it's genuinely well made, not a cheap stand in for the real thing"
+          ]
+         }
+        ]
+       },
+       {
+        "fr": 16,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "b2b-buying-process-2.webp",
+          "w": 360,
+          "h": 360,
+          "alt": "",
+          "shown": 123
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 54,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Buyer-"
+         },
+         {
+          "t": "ul",
+          "items": [
+           "Cares about: price and whether delivery will actually show up on time",
+           "Objections: cost versus what they'll actually make back",
+           "Needs to know: clearing pricing, plus the option for a discount on bigger orders",
+           "How we reach them: competitive case pricing and dependable delivery"
+          ]
+         }
+        ]
+       },
+       {
+        "fr": 15,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "b2b-buying-process-3.webp",
+          "w": 360,
+          "h": 360,
+          "alt": "",
+          "shown": 112
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 54,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Decider-"
+         },
+         {
+          "t": "ul",
+          "items": [
+           "Cares about: whether it'll really bring more money and make customers happier",
+           "Objections: might just be a passing trend",
+           "Needs to know: real numbers, and a sense that it actually fits the brand",
+           "How we reach them: lead with the revenue story and how it sets them apart"
+          ]
+         }
+        ]
+       },
+       {
+        "fr": 16,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "b2b-buying-process-4.webp",
+          "w": 360,
+          "h": 360,
+          "alt": "",
+          "shown": 123
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 54,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Gatekeeper-"
+         },
+         {
+          "t": "ul",
+          "items": [
+           "Cares about: whether Ar0und is legit, easy vendor to bring on board",
+           "Objections: missing paperwork or certifications stop things cold",
+           "Needs to know: certifications and references, ready to go",
+           "How we reach them: show up prepared, with the paperwork already done"
+          ]
+         }
+        ]
+       },
+       {
+        "fr": 15,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "b2b-buying-process-5.webp",
+          "w": 360,
+          "h": 360,
+          "alt": "",
+          "shown": 118
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   ]
+  },
+  "buyer-strategy": {
+   "title": "Buyer Strategy",
+   "unit": "Unit 2",
+   "sections": [
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 27,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "buyer-strategy-1.webp",
+          "w": 198,
+          "h": 270,
+          "alt": "",
+          "shown": 206
+         }
+        ]
+       },
+       {
+        "fr": 54,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "How Consumers and Businesses Buy"
+         },
+         {
+          "t": "p",
+          "html": "At Ar0und we aim to sell to two kinds of buyers. Accommodating a drinker who picks up our can to drink, and a bar or store that will place our product on it's shelves."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Who buys?",
+      "blocks": [
+       {
+        "t": "h3",
+        "text": "Consumer"
+       },
+       {
+        "t": "p",
+        "html": "Adult's who are looking for a proper drink without alcohol. Anywhere between sober drinkers, designated drivers, hosts, and gift-givers."
+       },
+       {
+        "t": "h3",
+        "text": "Business"
+       },
+       {
+        "t": "p",
+        "html": "From bar and restaurant owners to liquor and grocery stores. Owners who approve the purchase of product(s) to sell to their consumers."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Why do they buy?",
+      "blocks": [
+       {
+        "t": "h3",
+        "text": "Consumer"
+       },
+       {
+        "t": "p",
+        "html": "Consumers who want a drink that is like a true cocktail with no alcohol, giving more options for social event beverages."
+       },
+       {
+        "t": "h3",
+        "text": "Business"
+       },
+       {
+        "t": "p",
+        "html": "Targeting guests who want to skip the alcohol and want to order a bar-appropriate drink. A canned cocktail adds a menu item with no bartender needed."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "What influences them?",
+      "blocks": [
+       {
+        "t": "h3",
+        "text": "Consumer"
+       },
+       {
+        "t": "p",
+        "html": "Friends, family, reviews, and online presence. Designed to attract new customers who are already drinking zero-proof cocktails or new zero-proof drinkers."
+       },
+       {
+        "t": "h3",
+        "text": "Business"
+       },
+       {
+        "t": "p",
+        "html": "Margin per can, case price, and order size. Guest requests and competitor businesses can also play a role in influencing the decision to buy &amp; supply."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "How do they decide?",
+      "blocks": [
+       {
+        "t": "h3",
+        "text": "Consumer"
+       },
+       {
+        "t": "p",
+        "html": "By trying, on the shelf consumers make quick choices that are often determined by the can itself. Online, the website and description will play a major role."
+       },
+       {
+        "t": "h3",
+        "text": "Business"
+       },
+       {
+        "t": "p",
+        "html": "By taste and numbers (price, amount sold, receptiveness to customers). The decision will be based on whether they think the product will be liked and sold frequently within the business."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "What creates value?",
+      "blocks": [
+       {
+        "t": "h3",
+        "text": "Consumer"
+       },
+       {
+        "t": "p",
+        "html": "Having our cocktail taste like the traditional drink it is recreating. The details of our brand being portable and ready to drink will be a major value point for our brand."
+       },
+       {
+        "t": "h3",
+        "text": "Business"
+       },
+       {
+        "t": "p",
+        "html": "Steady supply of cans that will sell without staff effort. The option of supplying a good non-alcoholic RTD can available to sell."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "How should we reach them?",
+      "blocks": [
+       {
+        "t": "h3",
+        "text": "Consumer"
+       },
+       {
+        "t": "p",
+        "html": "Online platforms are going to be huge for our startup. Short videos on recipes and serving tips via Instagram or TikTok. Tasting events at liquor or grocery stores can help create recognition for the brand."
+       },
+       {
+        "t": "h3",
+        "text": "Business"
+       },
+       {
+        "t": "p",
+        "html": "Direct visits, tastings, and distributor introductions. Working with liquor reps will help us accomplish this through their network of businesses."
+       }
+      ]
+     }
+    ]
+   ]
+  },
+  "target-market-decision": {
+   "title": "Target Market Decision",
+   "unit": "Unit 3",
+   "sections": [
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 39,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Primary Target:"
+         },
+         {
+          "t": "p",
+          "html": "Adults 21-34 who drink once a week or less, still go out with friends to bars and restaurants, and live in or near an active bar/restaurant scene. We launch first in states where a 0.0% canned cocktail is easy to sell and stock ("
+         }
+        ]
+       },
+       {
+        "fr": 39,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Target Strategy:"
+         },
+         {
+          "t": "p",
+          "html": "We will focus on one segment, Moderating Explorers aged 21-34, with one marketing mix. Ch. 9: concentrated marketing can create a competitive advantage over firms trying to reach multiple markets-the right fit for a new brand with a small budget."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 33,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Connection to Carlos:"
+         },
+         {
+          "t": "p",
+          "html": "Carlos is the face of this segment. He cut back on drinking for his health, still goes out with friends, wants a drink that is not too sweet, and trusts bartenders, creators, and friends more than ads. Our primary segment is \"a city full of Carloses.\""
+         }
+        ]
+       },
+       {
+        "fr": 39,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Alternative Considered:"
+         },
+         {
+          "t": "p",
+          "html": "Fully alcohol-free adults, 25-50 (our original Unit 1 customer: driving, remission, religion, medication). Meaningful but smaller and harder to reach as one group: loyal if won, but many avoid bar settings. Decision: alternative/phase two."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Size and Purchasing Power",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "About 64.4 million Americans are aged 21-34 <a href=\"https://www.census.gov/data/tables/time-series/demo/popest/2020s-national-detail.html\">(U.S. Census Bureau, July 2024 estimates)</a>. Nationally, the drinking rate hit a record low of 54% <a href=\"https://www.michiganpublic.org/2025-08-13/percentage-of-americans-who-say-they-drink-alcohol-hits-record-low-gallup-says\">(Gallup, 2025)</a>."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Profitability",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "93% of non-alcoholic buyers also buy alcohol <a href=\"https://anba.org/wp-content/uploads/2025/02/Draft-ANBA-Industry-Statistics.pdf\">(NIQ)</a>. Off-premise NA sales reached about $823 million in 2024, up 27.2% <a href=\"https://anba.org/wp-content/uploads/2025/02/Draft-ANBA-Industry-Statistics.pdf\">(NIQ via ANBA)</a>."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "fold",
+      "title": "Marketing Capabilities",
+      "blocks": [
+       {
+        "t": "p",
+        "html": "We are a small brand that cannot match Diageo-backed budgets (Unit 1 SWOT). Partner bartenders, creators, and #SipTheWorld are affordable ways to reach this segment."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "THE DECISION WE CHANGED"
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 19,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Original Assumption:"
+         },
+         {
+          "t": "p",
+          "html": "Unit 1: our primary customers were adults roughly 25-50 who cannot or choose not to drink, reached first through our own online store."
+         }
+        ]
+       },
+       {
+        "fr": 19,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Research Evidence:"
+         },
+         {
+          "t": "p",
+          "html": "Unit 1 SWOT: people are moderating, not quitting. 93% of NA buyers also buy alcohol <a href=\"https://anba.org/wp-content/uploads/2025/02/Draft-ANBA-Industry-Statistics.pdf\">(NIQ)</a>. Only 50% of 18-34s drink and 66% think moderate drinking is unhealthy <a href=\"https://www.michiganpublic.org/2025-08-13/percentage-of-americans-who-say-they-drink-alcohol-hits-record-low-gallup-says\">(Gallup, 2025)</a>. Unit 2 journey map: the key moment is the bartender exchange: 72% of cocktail drinkers ask bar staff when unsure <a href=\"https://www.barandrestaurant.com/food-beverage/trend-premise-whats-stirring-americas-cocktail-culture\">(CGA by NIQ)</a>."
+         }
+        ]
+       },
+       {
+        "fr": 19,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Final Decision:"
+         },
+         {
+          "t": "p",
+          "html": "Narrow to moderating drinkers aged 21-34 and lead with partner bartenders in bars and restaurants. The online store becomes the repeat purchase channel, not the launch channel."
+         }
+        ]
+       },
+       {
+        "fr": 19,
+        "blocks": [
+         {
+          "t": "h3",
+          "text": "Strategic Rationale:"
+         },
+         {
+          "t": "p",
+          "html": "Concentrated targeting gives a small brand a defensible niche. Moderators are already in bars spending money, and the bartender channel matches how Carlos decides. Abstainers stay as a phase two segment."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Which Customers Should We Prioritize?"
+     },
+     {
+      "t": "p",
+      "html": "Ar0und should prioritize adults 21-34 who drink once a week or less but still go out with friends. They are a large group (<a href=\"https://www.census.gov/data/tables/time-series/demo/popest/2020s-national-detail.html\">about 64 million</a>). They drink less than older adults and are more likely to see even moderate drinking as unhealthy, they already spend on nights out, and they decide the way Carlos does: on taste and on the word of a bartender or friend. That is the strongest opportunity for a small, bartender-led, global recipe brand."
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Sources"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.census.gov/data/tables/time-series/demo/popest/2020s-national-detail.html\">U.S. Census Bureau, National Population Estimates by Single Year of Age (July 1, 2024)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.michiganpublic.org/2025-08-13/percentage-of-americans-who-say-they-drink-alcohol-hits-record-low-gallup-says\">Gallup, via Michigan Public/NPR: Percentage of Americans who say they drink alcohol hits record low (Aug 13, 2025)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://anba.org/wp-content/uploads/2025/02/Draft-ANBA-Industry-Statistics.pdf\">American Non-Alcoholic Beverage Association, Industry Statistics, compiling NIQ and IWSR data (Feb 2025)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.barandrestaurant.com/food-beverage/trend-premise-whats-stirring-americas-cocktail-culture\">CGA by NIQ, via Bar &amp; Restaurant: On Trend in the On Premise: What's Stirring America's Cocktail Culture</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.kunc.org/npr-news/2024-07-09/id-please-should-kids-be-able-to-buy-nonalcoholic-beer-wine-and-mocktails\">NPR: Should kids be able to buy nonalcoholic beer, wine and mocktails? (July 9, 2024)</a>"
+     }
+    ]
+   ]
+  },
+  "marketing-research-challenge": {
+   "title": "Marketing Research Challenge",
+   "unit": "Unit 3",
+   "sections": [
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 47,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Marketing Decision:"
+         },
+         {
+          "t": "p",
+          "html": "We face the question of whether Ar0und should put its first marketing dollars into the on-premise bartender partnership program (training, incentives, in-venue placement with partner bars) before spending comparable money on retail distribution and digital or social advertising."
+         }
+        ]
+       },
+       {
+        "fr": 20,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "marketing-research-challenge-1.webp",
+          "w": 360,
+          "h": 360,
+          "alt": "",
+          "shown": 150
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Research Problem:"
+     },
+     {
+      "t": "p",
+      "html": "Most of our go-to-market plan rests on the claim that the experience of a bartender personally recommending the drink, does more to convert a hesitant customer than anything else, more than menu placement, price, or an ad would. We know the category is growing and we know our word of mouth matters to our customers, but we don’t know how much a bartender’s in-person recommendation actually moves someone from consideration to ordering, compared to just reading a good menu description or seeing a lower price."
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Research Objective:"
+     },
+     {
+      "t": "p",
+      "html": "To find out how much a bartender’s personal, in-person recommendation actually changes a target customer’s odds of ordering an unfamiliar non-alcoholic cocktail, relative to seeing the same drink listed on a menu or a store shelf with no recommendation."
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Hypothesis:"
+     },
+     {
+      "t": "p",
+      "html": "Adults 21-34 who drink once a week or less are more likely to order a new non-alcoholic cocktail when a bartender recommends it than when they only see it on a menu or a store shelf."
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Secondary Research:"
+     },
+     {
+      "t": "p",
+      "html": "The market exists and is growing fast. Non-alcoholic beer, wine and spirits passed $1 billion in U.S. store sales in 2025 <a href=\"https://www.beveragedaily.com/Article/2026/04/17/non-alcohol-beer-wine-and-spirits-us-growth-potential/\">(NIQ, via BeverageDaily)</a>. Ready-to-drink NA cocktails grew 123% in the year to August 2025 and now make up 64% of NA spirits sales <a href=\"https://develop.nielseniq.com/global/en/wp-content/uploads/sites/4/2025/08/NIQ-BevAl-Non-Alcohol-Beer-Wine-and-Spirits-August-2025.pdf\">(NIQ)</a>. Independent restaurants added NA drinks to their menus 47% more in January 2026 than a year earlier <a href=\"https://www.businesswire.com/news/home/20260318465431/en/SpotOn-Reports-Independent-Restaurants-Increased-Non-Alcoholic-Beverage-Menu-Additions-47-Year-Over-Year-as-They-Rebuild-Beverage-Profit-Margin\">(SpotOn, via Business Wire)</a>."
+     },
+     {
+      "t": "p",
+      "html": "Our target still goes out, and they listen to bartenders. Adults 21 to 34 went out for a drink 5.7 times in three months, versus 1.4 times for adults 55 and older. 38% of Gen Z ask for the bartender's recommendation every or almost every time they buy a cocktail, 10 points above the average guest, and 74% of bartenders say guests order what they recommend <a href=\"https://cgastrategy.com/?p=74962\">(CGA by NIQ)</a>. Legal-age Gen Z isn't quitting either: 74% had a drink in the past six months and 84% had a mixed drink <a href=\"https://www.ypulse.com/newsfeed/2026/07/21/gen-z-isnt-actually-drinking-less/\">(YPulse, citing IWSR, 2026)</a>. IWSR counts only legal-age drinkers, which is why it runs higher than <a href=\"https://www.michiganpublic.org/2025-08-13/percentage-of-americans-who-say-they-drink-alcohol-hits-record-low-gallup-says\">Gallup's 50%</a> for all 18 to 34 year olds on Page 1. At bars, NA cocktails are already the most-ordered NA drink: 9% of guests had one in the past three months <a href=\"https://develop.nielseniq.com/global/en/wp-content/uploads/sites/4/2025/08/NIQ-BevAl-Non-Alcohol-Beer-Wine-and-Spirits-August-2025.pdf\">(NIQ, 2025)</a>."
+     },
+     {
+      "t": "p",
+      "html": "State laws differ. <a href=\"https://www.dailyintakeblog.com/2026/03/ttb-releases-low-and-no-alcohol-beverage-guidance/\">Under federal rules</a>, drinks under 0.5% ABV are not alcoholic beverages and can be labeled \"non-alcoholic\" or \"alcohol free,\" so many NA drinks contain trace alcohol. Ar0und is a true 0.0%. There is no national rule on who can buy NA drinks: 39 states had no statewide policy on selling them to minors <a href=\"https://www.kunc.org/npr-news/2024-07-09/id-please-should-kids-be-able-to-buy-nonalcoholic-beer-wine-and-mocktails\">(NPR, 2024)</a>. Michigan sells NA beer only to people 18 and older but requires no license for NA wine and spirits under 0.5% <a href=\"https://www.michigan.gov/lara/bureau-list/lcc/faq/nonalcoholic-beverage-products\">(Michigan Liquor Control Commission)</a>. In New York, <a href=\"https://legislation.nysenate.gov/pdf/bills/2025/S3836\">bill S3836</a> would let licensed liquor stores sell NA versions of alcoholic drinks. For Ar0und, that means checking the rules in each launch state, selling 21+ only, and leaning on bars and grocery stores before liquor stores in New York."
+     },
+     {
+      "t": "p",
+      "html": "The gap: none of this tells us whether a bartender's word moves our target to order a new NA cocktail instead of just reading the menu or seeing it on a shelf. That is the question our survey tests."
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 46,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "marketing-research-challenge-2.webp",
+          "w": 612,
+          "h": 408,
+          "alt": "",
+          "shown": 351
+         }
+        ]
+       },
+       {
+        "fr": 47,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Primary Research Need:"
+         },
+         {
+          "t": "p",
+          "html": "Before we commit real money to bartender training and royalties instead of a cheaper paid social push or a retail-first launch, we need primary data from our own target. We started with a short online survey (Page 3) because it is the fastest and cheapest of the three primary methods. If the survey supports the hypothesis, the next steps are an ethnographic study and a simple A/B test in two or three partner bars, comparing how often guests order Ar0und when a bartender recommends it versus when it only sits on the menu."
+         },
+         {
+          "t": "h2",
+          "text": "What has to be true for our plan to work:"
+         },
+         {
+          "t": "p",
+          "html": "Our hypothesis is the main test, but three other things also have to hold before the bartender plan is worth the money. The survey checks each one:"
+         },
+         {
+          "t": "p",
+          "html": "<strong>1. The hypothesis itself: </strong>a bartender recommendation beats a menu or a store shelf"
+         },
+         {
+          "t": "p",
+          "html": "<strong>2. Reach: </strong>our target goes out often enough to meet a bartender ."
+         },
+         {
+          "t": "p",
+          "html": "<strong>3. Repeat: </strong>after a first try at the bar, they would buy again somewhere we sell"
+         },
+         {
+          "t": "p",
+          "html": "<strong>4. Positioning: </strong>global recipes and a not-too-sweet taste are what they care about"
+         },
+         {
+          "t": "p",
+          "html": "The hypothesis can be true and still not justify the budget if reach or repeat fails. So these extra checks build on it: they decide how much to put behind bartenders, not whether bartenders matter. If the hypothesis fails, that budget moves to retail distribution and paid content before launch, not after."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Sources"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.beveragedaily.com/Article/2026/04/17/non-alcohol-beer-wine-and-spirits-us-growth-potential/\">NIQ, via BeverageDaily: Non-alcohol beer, wine and spirits: US growth potential (Apr 17, 2026)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://develop.nielseniq.com/global/en/wp-content/uploads/sites/4/2025/08/NIQ-BevAl-Non-Alcohol-Beer-Wine-and-Spirits-August-2025.pdf\">NIQ: Non-Alcohol Beer, Wine and Spirits (Aug 2025)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.businesswire.com/news/home/20260318465431/en/SpotOn-Reports-Independent-Restaurants-Increased-Non-Alcoholic-Beverage-Menu-Additions-47-Year-Over-Year-as-They-Rebuild-Beverage-Profit-Margin\">SpotOn, via Business Wire: Independent Restaurants Increased Non-Alcoholic Beverage Menu Additions 47% Year Over Year (Mar 18, 2026)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://cgastrategy.com/?p=74962\">CGA by NIQ: Five ways Gen Z are shaking up BevAl in the US On Premise</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.ypulse.com/newsfeed/2026/07/21/gen-z-isnt-actually-drinking-less/\">YPulse, citing IWSR: Gen Z isn't actually drinking less (July 21, 2026)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.dailyintakeblog.com/2026/03/ttb-releases-low-and-no-alcohol-beverage-guidance/\">Keller and Heckman, The Daily Intake: TTB releases low and no alcohol beverage guidance (Mar 10, 2026)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.kunc.org/npr-news/2024-07-09/id-please-should-kids-be-able-to-buy-nonalcoholic-beer-wine-and-mocktails\">NPR: Should kids be able to buy nonalcoholic beer, wine and mocktails? (July 9, 2024)</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://www.michigan.gov/lara/bureau-list/lcc/faq/nonalcoholic-beverage-products\">Michigan Liquor Control Commission: Nonalcoholic Beverage Products FAQ</a>"
+     },
+     {
+      "t": "p",
+      "html": "<a href=\"https://legislation.nysenate.gov/pdf/bills/2025/S3836\">New York State Senate: Bill S3836, 2025-2026 session</a>"
+     }
+    ]
+   ]
+  },
+  "survey-development": {
+   "title": "Survey Development & Data Collection",
+   "unit": "Unit 3",
+   "sections": [
+    [
+     {
+      "t": "p",
+      "html": "Survey Objective was to find out whether adults 21-34 who drink once a week or less are more likely to order or buy a new non-alcoholic cocktail when a bartender recommends it than when they see it on a menu or a store shelf, and whether they go out often enough for a bartender-led business model to reach them."
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 35,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "survey-development-1.webp",
+          "w": 720,
+          "h": 540,
+          "alt": "",
+          "shown": 360
+         }
+        ]
+       },
+       {
+        "fr": 49,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Why We Chose Google Forms"
+         },
+         {
+          "t": "p",
+          "html": "Surveys are the fastest and cheapest way to collect primary data. Google Forms is free, it's anonymous, and every answer can be easily exported."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "What Each Question Tells Us"
+     },
+     {
+      "t": "p",
+      "html": "Q1) Demographic. Screening. The goal was to focus on our target audience of ages 21-34. This is the data we are primarily focused on."
+     },
+     {
+      "t": "p",
+      "html": "Q2) Geographic. Focuses on the region where our data is coming from."
+     },
+     {
+      "t": "p",
+      "html": "Q3) Geographic. Focuses on whether our target lives where there are enough bars for a bartender-led model."
+     },
+     {
+      "t": "p",
+      "html": "Q4) Behavioral. Looks at usage rates, from moderate drinkers to heavy drinkers to non-drinkers."
+     },
+     {
+      "t": "p",
+      "html": "Q5) Behavioral. Looks at how often people go out, so we know if the bartender channel actually reaches them."
+     },
+     {
+      "t": "p",
+      "html": "Q6) Hypothesis. Tests whether people are more likely to buy a new non-alcoholic cocktail when a bartender recommends it than when they see it on a menu, a store shelf, or a friend's post through social media"
+     },
+     {
+      "t": "p",
+      "html": "Q7) Psychographic. Agree/disagree statements on global flavors, how their drink looks, drinking less, and whether non-alcoholic drinks are too sweet, which shapes how we position Ar0und."
+     },
+     {
+      "t": "p",
+      "html": "Q8) Behavioral. Where they would buy it again, so we know whether to add grocery and liquor stores after bars."
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 35,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "survey-development-2.webp",
+          "w": 720,
+          "h": 540,
+          "alt": "",
+          "shown": 360
+         }
+        ]
+       },
+       {
+        "fr": 49,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Who We Ask / How We Recruit / How We Share It"
+         },
+         {
+          "t": "p",
+          "html": "Who We Ask: Friends in our social circles"
+         },
+         {
+          "t": "p",
+          "html": "How We Recruit: Distributing survey link to as many HWS students as possible"
+         },
+         {
+          "t": "p",
+          "html": "How We Share It: Sharing via link and QR code shared live during our class presentation"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "How Responses Are Collected and Exported"
+     },
+     {
+      "t": "p",
+      "html": "Google Forms records every response with a chart for each question automatically. All answers also go into a linked Google Sheet, one row per person, which we filter to our target and download as Excel."
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Limitations and Bias"
+     },
+     {
+      "t": "ul",
+      "items": [
+       "30 of our 51 responses were under 21, so we screened them out. Most of the rest are Northeast college students aged 21-24, one respondent was 35-44, and no one aged 25-34 has answered yet which is a big part of our target audience.",
+       "People say they'd buy things they never actually buy.",
+       "A small sample: only 15 people fit our exact target, so the results are pretty limited."
+      ]
+     }
+    ],
+    [
+     {
+      "t": "cols",
+      "cols": [
+       {
+        "fr": 35,
+        "blocks": [
+         {
+          "t": "img",
+          "file": "survey-development-3.webp",
+          "w": 720,
+          "h": 540,
+          "alt": "",
+          "shown": 360
+         }
+        ]
+       },
+       {
+        "fr": 49,
+        "blocks": [
+         {
+          "t": "h2",
+          "text": "Next Step: Study in Partner Bars"
+         },
+         {
+          "t": "p",
+          "html": "If we had more time, we would run a study, watching customers in their natural setting instead of asking them. It fits Ar0und because ours is a social drink, and how people order and share drinks with friends is something a survey can't capture. A survey tells us what people say they would do but an observation shows what they actually do. We would partner with 2-3 bars in the Finger Lakes area, put Ar0und on the menu, and spend nights watching how guests order."
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "What We'd Watch For"
+     },
+     {
+      "t": "ul",
+      "items": [
+       "Bartender vs. menu: How many guests order Ar0und after a bartender recommends it, compared with guests who just see it on the menu",
+       "Who orders it: Rough age, whether they're also drinking alcohol that night, and whether they're in a group or alone",
+       "When they order it: Early in the night, between alcoholic drinks, or as the last drink of the night",
+       "Group influence: Whether one person ordering it leads friends to order it too",
+       "Reactions: Whether guests post it, finish it, and order a second one",
+       "Questions guests ask: What they want to know"
+      ]
+     },
+     {
+      "t": "p",
+      "html": "Observation would be the next step to confirm what our survey suggests"
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Privacy"
+     },
+     {
+      "t": "p",
+      "html": "All responses are anonymous we don't collect names or emails, so we don't know who took the survey. The data is for this class project only and will be deleted after the project"
+     }
+    ],
+    [
+     {
+      "t": "h2",
+      "text": "Our Answer"
+     },
+     {
+      "t": "p",
+      "html": "How will we collect useful information that helps answer our marketing research question?"
+     },
+     {
+      "t": "p",
+      "html": "We collect useful information with a short anonymous Google Forms survey that screens for our target, compares how likely they are to buy in each situation, and records every answer in a spreadsheet we can filter"
+     }
+    ],
+    [
+     {
+      "t": "link",
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLSf1EGefk98mQnfagiNvh7n5nN4osWVJ8Olbfj3nkidjCp0Csw/viewform",
+      "label": "Open the survey in Google Forms",
+      "note": "The original page shows the survey itself. It opens on Google Forms in a new tab."
+     }
+    ],
+    [
+     {
+      "t": "img",
+      "file": "survey-development-4.webp",
+      "w": 566,
+      "h": 566,
+      "alt": "QR code for the survey.",
+      "shown": 283,
+      "narrow": true
+     }
+    ]
+   ]
+  },
+  "marketing-decisions-and-measurement": {
+   "title": "Marketing Decisions & Measurement",
+   "unit": "Unit 3",
+   "sections": [
+    [
+     {
+      "t": "fold",
+      "title": "3 Key Measures",
+      "blocks": [
+       {
+        "t": "h3",
+        "text": "1. Bartender Lift"
+       },
+       {
+        "t": "p",
+        "html": "We see the likelihood of recommendations from bartenders vs. the likelihood of purchase from a grocery or liquor store shelf. In our findings, we had 5 responses for \"very likely\" to get a drink a bartender recommends, compared with 0 \"very likely\" responses for grocery/liquor store influence on purchase."
+       },
+       {
+        "t": "p",
+        "html": "This supports the idea that bartender lift is important for getting new customers to try Ar0und for the first time over just supplying the store's stock."
+       },
+       {
+        "t": "h3",
+        "text": "2. On-Premise Reach"
+       },
+       {
+        "t": "p",
+        "html": "61.9% of our responders reported that they go to a bar or cocktail restaurant at least 1-3 times a month at the minimum. On-Premise reach is going to be influential for our brand, as many seem to be going out to bars/cocktail restaurants frequently."
+       },
+       {
+        "t": "h3",
+        "text": "3. Repeat Channel Mix"
+       },
+       {
+        "t": "p",
+        "html": "Our highest response for most likely to repeat purchase a non-alcoholic beverage was \"At bar or restaurant\" with 54.8%. Following that was 28.6% for \"At the grocery store\"."
+       },
+       {
+        "t": "p",
+        "html": "With our highest percentage of respondents being likely to repeat purchase on-premise, like before, we want to focus much of our marketing energy towards bartenders/restaurants/bars for our brand."
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Why this supports our hypothesis:"
+     },
+     {
+      "t": "p",
+      "html": "In our target (the 15 people aged 21-34 who drink once a week or less), the average likelihood to order was 2.47 out of 5 when a bartender recommends it, versus 1.67 on a store shelf: a Bartender Lift of +0.80. 10 of the 15 rated the bartender higher than the shelf, and nobody out of all 51 respondents gave the shelf a 4 or 5. Across all 51 respondents, the lift is biggest for people who go out weekly (+1.31) and smallest for people who go out less than once a month (+0.33)."
+     },
+     {
+      "t": "h3",
+      "text": "Why this challenges our hypothesis:"
+     },
+     {
+      "t": "p",
+      "html": "27% of our target go out less than once a month; a bartender-led launch would miss about a quarter of them, and they need another route such as grocery stores or online. Overall interest is also low: only 20% of our target gave the bartender a 4 or 5, so a recommendation helps, but it does not make the sale on its own."
+     }
+    ],
+    [
+     {
+      "t": "img",
+      "file": "marketing-decisions-and-measurement-1.webp",
+      "w": 1554,
+      "h": 607,
+      "alt": "Bar chart: How often do you go to a bar or cocktail restaurant? All 51 responses. Rarely or never: 7 (14%). Less than once a month: 11 (22%). 1 to 3 times a month: 20 (39%). About once a week: 11 (22%). More than once a week: 2 (4%). Source: Ar0und survey, 51 responses, Oct 31 to Nov 2, 2026.",
+      "shown": 650
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "How Results could change our STP decisions:"
+     },
+     {
+      "t": "p",
+      "html": "<strong>Segmentation:</strong> If 25-34 year old city dwellers respond more strongly than 21-24 year old college students, we must split up our segment into 2 narrower sections."
+     },
+     {
+      "t": "p",
+      "html": "<strong>Targeting:</strong> If our sober individual segment responds more strongly than moderating customers, we must revise \"The Decision We Changed\"."
+     },
+     {
+      "t": "p",
+      "html": "<strong>Positioning:</strong> Only 20% of all 51 respondents agree that most non-alcoholic drinks are too sweet, while 73% enjoy food and drinks from other countries. So we lead with authentic global recipes and keep \"not too sweet\" as a secondary message."
+     },
+     {
+      "t": "p",
+      "html": "<strong>Marketing mix and B2B:</strong> Our results decide where the budget goes(Bartenders or in-store sampling). Business buyers we approach first will depend on where we are aiming our marketing strategy (Restaurant vs. Grocery Store)."
+     }
+    ],
+    [
+     {
+      "t": "table",
+      "head": [
+       "Potential Survery Finding",
+       "Marketing Interpretation",
+       "Strategic Response"
+      ],
+      "rows": [
+       [
+        "1: Our target rates a bartender recommnedation higher than a store shelf, and most visit bars at least monthly.",
+        "The bartender moment from Unit 2 is real and reachable.",
+        "Launch on-premise first: sign 3-5 partner restaurants for a 90-day trial, fund the bartender royalty and pour stories, and track orders as a KPI."
+       ],
+       [
+        "2: Bartender and shelf score about the same, but \"a friend posts about it\" scores the highest.",
+        "Trust comes more from peers than from staff; reference groups beat opinion leaders.",
+        "Shift budget towards creators and #SipTheWorld user-generated content plus in-store sampling; keep bartenders as a supporting channel without a heavy royalty."
+       ],
+       [
+        "3: Our target likes the bartender option but goes out less than once a month, and most would rebuy at a grocery store.",
+        "The preference is real, but the bar channel cannot deliver volume.",
+        "Use bars for discovery and trial, but plan repeat purchase through the grocery NA section and our online store while approaching grocery stores."
+       ]
+      ]
+     }
+    ],
+    [
+     {
+      "t": "h3",
+      "text": "Limitations and Next Research"
+     },
+     {
+      "t": "p",
+      "html": "Our biggest limitation is a convenience sample. 30 of our 51 responses were under 21, almost everyone else is a 21-24 college student in the Northeast, and nobody aged 25-34 answered. People also report what they say they would do, not what they actually buy. Next, we would run an ethnographic study in two or three partner bars, then a small test market using the 90-day B2B trial from Unit 2."
+     }
+    ],
+    [
+     {
+      "t": "table",
+      "caption": "Our Conclusion",
+      "keyed": true,
+      "head": null,
+      "rows": [
+       [
+        "#1 Target Market Insight",
+        "Our customers are moderators, not quitters. They still go out; they just want something worth ordering."
+       ],
+       [
+        "Selected Target Market",
+        "Moderating Explorers: adults 21-34 who drink once a week or less and still go out with friends."
+       ],
+       [
+        "Most Important Research Question",
+        "Does a bartender's recommendation make our target more likely to order than seeing Ar0und on a menu or a store shelf?"
+       ],
+       [
+        "Most Valuable Survey Measure",
+        "Bartender Lift (bartender likelihood minus shelf likelihood in our target): +0.80 so far (2.47 vs 1.67 out of 5)."
+       ],
+       [
+        "Next Strategic Decision",
+        "Whether to commit our launch budget to partner bartenders or lead with retail and online."
+       ]
+      ]
+     }
+    ],
+    [
+     {
+      "t": "img",
+      "file": "marketing-decisions-and-measurement-2.webp",
+      "w": 1554,
+      "h": 698,
+      "alt": "Bar chart: How often do you usually drink alcohol? All 51 responses. Never: 9 (18%). Less than once a month: 3 (6%). 1 to 3 times a month: 17 (33%). About once a week: 16 (31%). More than once a week: 6 (12%). Source: Ar0und survey, 51 responses, Oct 31 to Nov 2, 2026.",
+      "shown": 650
+     }
+    ],
+    [
+     {
+      "t": "img",
+      "file": "marketing-decisions-and-measurement-3.webp",
+      "w": 1554,
+      "h": 701,
+      "alt": "Stacked bar chart: How likely are you to order a new NA cocktail when... Share of all 51 respondents giving each rating, from 1 (very unlikely) to 5 (very likely). A bartender recommends it: 27%, 24%, 25%, 14%, 10%; average 2.55. It is on a bar or restaurant menu: 33%, 35%, 20%, 8% and a small remainder; average 2.14. It is on a store shelf: 41%, 43%, 16%, none at 4 or 5; average 1.75. A friend posts about it: 33%, 27%, 24%, 16%, none at 5; average 2.22. Source: Ar0und survey, 51 responses, Oct 31 to Nov 2, 2026.",
+      "shown": 650
+     }
+    ],
+    [
+     {
+      "t": "p",
+      "html": "Ai disclosure: AI was used to assist on the graphs on google sheets and branding them ar0und colors"
+     }
+    ]
+   ]
+  }
+ },
+ "home": {
+  "mockups": [
+   {
+    "t": "img",
+    "file": "home-1.webp",
+    "w": 432,
+    "h": 424,
+    "alt": "Ar0und Mexico can mock-up: a white can with black tile patterns, a dotted map of Mexico and line drawings of Mexico City landmarks.",
+    "shown": 216
+   },
+   {
+    "t": "img",
+    "file": "home-2.webp",
+    "w": 564,
+    "h": 651,
+    "alt": "Ar0und Italy can mock-up: a cream can with brick-red ornament, a dotted map of Italy and line drawings of Roman landmarks.",
+    "shown": 282
+   },
+   {
+    "t": "img",
+    "file": "home-3.webp",
+    "w": 1397,
+    "h": 780,
+    "alt": "Ar0und Japan can mock-up: a brick-red can with white floral tiles, a dotted map of Japan and line drawings of a pagoda, a torii gate and Mount Fuji.",
+    "shown": 656
+   }
+  ],
+  "note": "These mock-ups were made using Adobe photoshop, Express and then firefly to clean the images.",
+  "team": [
+   "Ainsley Lonczak",
+   "Penelope Dwyer",
+   "Bella Fukushima",
+   "Connor Shibley"
+  ]
+ }
+}

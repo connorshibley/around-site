@@ -50,6 +50,11 @@ body { min-height: 100vh; }
 .cta--small { min-height: 2.5rem; padding: 0 var(--sc-4); box-shadow: var(--sc-e1), var(--sc-edge); }
 
 .text-link {
+  /* Padding widens the tap area; the matching negative margin keeps the
+     layout where it was. */
+  display: inline-block;
+  padding-block: 0.6rem;
+  margin-block: -0.6rem;
   color: var(--sc-accent);
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -70,7 +75,18 @@ body { min-height: 100vh; }
   pointer-events: none;
 }
 .bar > * { pointer-events: auto; }
-.bar__mark { color: var(--sc-ink); text-decoration: none; display: inline-flex; }
+.bar__mark { color: var(--sc-ink); text-decoration: none; display: inline-flex; align-items: center; min-height: 2.75rem; }
+/* On the home page the bar floats over the scroll journey. A soft fade of the
+   page's own ground behind it keeps the wordmark readable when ordinary text
+   scrolls underneath. The colour follows the page as it drifts between acts. */
+.bar:not(.bar--solid)::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 -1.25rem 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(var(--sc-canvas) 35%, color-mix(in oklab, var(--sc-canvas) 0%, transparent));
+}
 /* Inner pages scroll ordinary content under the bar, so it needs a ground. */
 .bar--solid {
   background: color-mix(in oklab, var(--sc-canvas) 86%, transparent);
@@ -169,12 +185,12 @@ body { min-height: 100vh; }
   color: var(--sc-ink-soft);
 }
 .site-foot nav { display: flex; flex-wrap: wrap; gap: var(--sc-2) var(--sc-5); }
-.site-foot a { color: var(--sc-ink); text-decoration: none; }
+.site-foot a { color: var(--sc-ink); text-decoration: none; display: inline-flex; align-items: center; min-height: 2.75rem; }
 .site-foot a:hover { text-decoration: underline; }
 .site-foot button {
   background: none; border: 1px solid var(--sc-hairline-strong); color: var(--sc-ink);
   border-radius: var(--sc-r-md); padding: var(--sc-1) var(--sc-3); cursor: pointer;
-  font-size: var(--sc-t-xs);
+  font-size: var(--sc-t-xs); min-height: 2.75rem;
 }
 .site-foot button:hover { border-color: var(--sc-ink-soft); }
 .site-foot__note { margin: 0; max-width: 46ch; }

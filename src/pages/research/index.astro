@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import research from '../../data/research.json';
+import '../../styles/inner.css';
+import '../../styles/research.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+// The unit names are the class's own. The one-line descriptions are added
+// here so a visitor knows what each unit covers.
+const about = {
+  'Unit 1': 'The brand, its competitors and how it shows up online.',
+  'Unit 2': 'Who buys Ar0und, and how people and businesses decide.',
+  'Unit 3': 'The target market, the research question and what the survey found.',
+};
+const team = research.home.team;
+const names = team.length > 1 ? `${team.slice(0, -1).join(', ')} and ${team[team.length - 1]}` : team.join('');
+let n = 0;
+---
+<Base title="The research behind Ar0und." description="The MGMT 210 class research behind Ar0und: brand, customers, buyers and a survey, in sixteen pages.">
+  <main id="main" class="page rs">
+    <div class="sc-wrap rs__article">
+      <header class="rs__intro sc-stack">
+        <p class="sc-label">MGMT 210 class project</p>
+        <h1 class="sc-display rs__title">The research behind Ar0und.</h1>
+        <p class="sc-lede">Ar0und began as a marketing class project. These sixteen pages are the group's work on the brand, its customers and its market, copied over from the original class site.</p>
+        <p class="rs__team">By the Shiblettes: {names}.</p>
+      </header>
+
+      <div class="rs__units">
+        {research.units.map((u) => (
+          <section class="rs__unit">
+            <h2 class="sc-display sc-display--md">{u.title}</h2>
+            <p class="rs__unit-about">{about[u.title]}</p>
+            <ol class="rs__toc" start={n + 1}>
+              {u.pages.map((slug) => {
+                n += 1;
+                return <li><a href={`${base}/research/${slug}`}>{research.pages[slug].title}</a></li>;
+              })}
+            </ol>
+          </section>
+        ))}
+      </div>
+
+      <section class="rs__mock">
+        <h2 class="sc-display sc-display--md">The can mock-ups</h2>
+        <div class="rs__mock-row">
+          {research.home.mockups.map((m) => (
+            <img src={`${base}/research/${m.file}`} alt={m.alt} width={m.w} height={m.h} loading="lazy" decoding="async" />
+          ))}
+        </div>
+        <p class="rs__mock-note">{research.home.note}</p>
+      </section>
+    </div>
+  </main>
+</Base>

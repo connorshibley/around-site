@@ -1,0 +1,97 @@
+---
+// Renders the research content blocks in src/data/research.json. The text was
+// copied from the class site; the `html` strings hold only <strong>, <em>,
+// <br> and <a>, written by the one-off conversion script.
+const { blocks } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const figStyle = (b) => {
+  if (b.narrow) return `max-width:${Math.round(Math.max((b.shown || b.w) * 1.25, 220))}px`;
+  if (b.h > b.w * 1.15) return `max-width:min(100%, ${Math.min(b.w, 520)}px)`;
+  return `max-width:min(100%, ${b.w}px)`;
+};
+---
+{blocks.map((b) => (
+  <>
+    {b.t === 'h2' && <h2 class="rs-h2">{b.text}</h2>}
+    {b.t === 'h3' && <h3 class="rs-h3">{b.text}</h3>}
+    {b.t === 'p' && <p class:list={['rs-p', { 'rs-p--center': b.center, 'rs-p--emoji': b.emoji }]} set:html={b.html} />}
+    {b.t === 'ul' && <ul class="rs-list">{b.items.map((i) => <li set:html={i} />)}</ul>}
+    {b.t === 'ol' && <ol class="rs-list">{b.items.map((i) => <li set:html={i} />)}</ol>}
+    {b.t === 'img' && (
+      <figure class:list={['rs-fig', { 'rs-fig--narrow': b.narrow }]} style={figStyle(b)}>
+        {b.href ? (
+          <a href={b.href}><img src={`${base}/research/${b.file}`} alt={b.alt} width={b.w} height={b.h} loading="lazy" decoding="async" /></a>
+        ) : (
+          <img src={`${base}/research/${b.file}`} alt={b.alt} width={b.w} height={b.h} loading="lazy" decoding="async" />
+        )}
+        {b.text && (
+          <details class="rs-text">
+            <summary>Read this image as text</summary>
+            {b.text.map((row) => (
+              <>
+                {row[0] === 'h3' && <p class="rs-text__lead">{row[1]}</p>}
+                {row[0] === 'step' && (
+                  <div class="rs-text__step">
+                    <p class="rs-text__name">{row[1]}</p>
+                    <p>{row[2]}</p>
+                    <p><em>{row[3]}</em></p>
+                    <p><strong>Touchpoints:</strong> {row[4]}</p>
+                    <p><strong>Opportunity:</strong> {row[5]}</p>
+                  </div>
+                )}
+                {row[0] === 'note' && (
+                  <div class="rs-text__step">
+                    <p class="rs-text__name">{row[1]}</p>
+                    <p>{row[2]}</p>
+                  </div>
+                )}
+              </>
+            ))}
+          </details>
+        )}
+      </figure>
+    )}
+    {b.t === 'cols' && (
+      <div class="rs-cols" style={`--cols:${b.cols.map((c) => `minmax(0, ${c.fr}fr)`).join(' ')}`}>
+        {b.cols.map((c) => (
+          <div class:list={['rs-col', { 'rs-col--art': c.blocks.every((x) => x.t === 'img') }]}>
+            <Astro.self blocks={c.blocks} />
+          </div>
+        ))}
+      </div>
+    )}
+    {b.t === 'grid' && (
+      <table class="rs-table rs-table--stack">
+        <thead><tr>{b.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+        <tbody>
+          {b.rows.map((r) => <tr>{r.map((c, i) => <td data-label={b.head[i]} set:html={c} />)}</tr>)}
+        </tbody>
+      </table>
+    )}
+    {b.t === 'table' && (
+      <table class:list={['rs-table', b.keyed ? 'rs-table--keyed' : 'rs-table--stack']}>
+        {b.caption && <caption>{b.caption}</caption>}
+        {b.head && <thead><tr>{b.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>}
+        <tbody>
+          {b.rows.map((r) => (
+            <tr>
+              {r.map((c, i) => (b.keyed && i === 0 ? <th scope="row">{c}</th> : <td data-label={b.head ? b.head[i] : undefined}>{c}</td>))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    )}
+    {b.t === 'fold' && (
+      <details class="rs-fold" open>
+        <summary>{b.title}</summary>
+        <div class="rs-fold__body"><Astro.self blocks={b.blocks} /></div>
+      </details>
+    )}
+    {b.t === 'link' && (
+      <div class="rs-link">
+        <a class="cta" href={b.href} target="_blank" rel="noopener">{b.label}</a>
+        <p>{b.note}</p>
+      </div>
+    )}
+  </>
+))}
