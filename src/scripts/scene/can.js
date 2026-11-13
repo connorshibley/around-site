@@ -1,11 +1,16 @@
 // A drinks can, modelled rather than faked with a cylinder: domed base, stand
 // ring, straight wall, tapered shoulder, rolled rim, recessed lid and pull-tab.
-// Proportions follow the tall cans in Connor's posters (height about 2.35x the
-// diameter). The can is 1.6 units tall and centred on its own origin.
+// Proportions follow the cans in the group's mock-up photos, which are 2.54x
+// as tall as they are wide. The can is 1.6 units tall and centred on its own
+// origin.
 import * as THREE from 'three';
 
 export const CAN_HEIGHT = 1.6;
-const R = 0.34; // wall radius
+const R = 0.34; // wall radius, before SLIM
+// The profile below was first drawn a little too stout. Rather than re-plot
+// every point, the finished can is narrowed by this much. The label image is
+// sized to match (see labels.js).
+const SLIM = 0.927;
 const Y_WALL = 0.11; // where the printed wall starts
 const Y_SHOULDER = 1.36;
 const Y_NECK = 1.5;
@@ -110,6 +115,7 @@ export function createCan(labelTexture) {
 
   // Centre the can on its origin so it spins and scales about its middle.
   group.children.forEach((m) => { m.position.y -= CAN_HEIGHT / 2; });
+  group.scale.set(SLIM, 1, SLIM);
 
   const root = new THREE.Group();
   root.add(group);

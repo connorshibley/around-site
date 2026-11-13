@@ -4,3 +4,4 @@ dist/
 lab/
 .DS_Store
 .env
+scripts/labels/preview-*.jpg

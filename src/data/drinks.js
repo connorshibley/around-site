@@ -6,9 +6,11 @@
 //     taste, origin, profile, tryNext, every price, and the starter pack.
 //   Nothing here is a nutrition or ingredient claim.
 //
-// `label` describes the can label drawn in code (src/scripts/scene/labels.js).
-// To use real artwork instead, save a flat 2048x1332 PNG in public/labels/ and
-// set `labelFile: 'mexico.png'` on the drink.
+// `label` gives the colours each can is printed in. The decoration itself
+// (tiles, landmarks, the logo's globe) is taken from the group's can mock-ups:
+// see scripts/labels/. The lettering is drawn by src/scripts/scene/labels.js.
+// `map` is where the dotted country map sits in the window between the tiles:
+// width and height in label pixels, and how far down the label its centre is.
 // `lat`/`lon` is where the globe lands.
 export const drinks = [
   {
@@ -24,7 +26,7 @@ export const drinks = [
     tryNext: 'italy',
     lat: 23.6,
     lon: -102.5,
-    label: { ground: '#f2f0ea', ink: '#1c1a19', soft: '#8a8580' },
+    label: { ground: '#f3f1ec', ink: '#1c1a19', mapInk: '#77726e', map: { w: 336, h: 222, t: 0.197 } },
   },
   {
     key: 'italy',
@@ -39,7 +41,7 @@ export const drinks = [
     tryNext: 'japan',
     lat: 42.5,
     lon: 12.5,
-    label: { ground: '#f1e9dc', ink: '#7a382e', soft: '#b08a7c' },
+    label: { ground: '#f3eee6', ink: '#7a382e', map: { w: 282, h: 312, t: 0.19 } },
   },
   {
     key: 'japan',
@@ -54,7 +56,7 @@ export const drinks = [
     tryNext: 'mexico',
     lat: 36.5,
     lon: 138.5,
-    label: { ground: '#7a382e', ink: '#f6efe4', soft: '#c9a79b' },
+    label: { ground: '#7a382e', ink: '#f6efe4', map: { w: 270, h: 300, t: 0.185 } },
   },
 ];
 

@@ -89,4 +89,4 @@ the next country. That is deliberate: the turn is the content.
   Wonderfully Refined."
 - Ar0und is a class concept (MGMT 210). Nothing is for sale; the site says so.
 - No invented numbers, reviews, prices or flavour profiles. Those wait for Connor.
-- The can labels are stand-ins drawn in code until the flat label files arrive.
+- The can labels use the group's own artwork, lifted from their can mock-up photos (scripts/labels/). Only the front of each can is in a photo, so the sides and back repeat the front.
