@@ -204,7 +204,9 @@ export async function createWorld({ host, canvas, engine, els, drinks, data, bas
         const len = b - a;
         const local = (p - a) / len;
         target.lift[i] = ramp(local, 0.2, 0.46) * (1 - ramp(local, 0.82, 1.0));
-        target.spin[i] = (clamp01(local) - 0.6) * Math.PI * 1.7; // front faces us at 60%
+        // The can turns as it rises, then holds with its label square to the
+        // viewer while its words are up, and turns away only as it sinks.
+        target.spin[i] = -(1 - smooth(ramp(local, 0.18, 0.5))) * Math.PI * 1.2 + smooth(ramp(local, 0.84, 1.0)) * Math.PI * 0.5;
         target.hi[i] = ramp(local, 0.12, 0.3) * (1 - ramp(local, 0.84, 1.02));
       });
       // The stage scrolls away at the end of the act; the world goes with it.
@@ -301,7 +303,7 @@ export async function createWorld({ host, canvas, engine, els, drinks, data, bas
     can.scale.setScalar(1);
     can.position.set(0, 0, 0);
     can.rotation.z = 0;
-    can.userData.spin.rotation.y = -0.38;
+    can.userData.spin.rotation.y = 0; // label square to the camera
     renderer.setPixelRatio(1);
     renderer.setSize(w, h, false);
     camera.aspect = w / h;

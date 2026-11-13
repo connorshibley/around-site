@@ -1,5 +1,6 @@
 // A single can you can turn by hand, for the drink pages. Drag it, or focus it
-// and use the arrow keys. It drifts slowly on its own unless motion is off.
+// and use the arrow keys. It starts with its label facing the viewer and sways
+// a little around that until it is touched, unless motion is off.
 import * as THREE from 'three';
 import { lightScene } from './studio.js';
 import { createCan } from './can.js';
@@ -26,7 +27,8 @@ export async function mountViewer({ host, canvas, drink, data, base = '' }) {
   const can = createCan(new THREE.CanvasTexture(await makeLabelCanvas(drink, data, base)));
   scene.add(can);
   const spin = can.userData.spin;
-  spin.rotation.y = -0.38;
+  spin.rotation.y = 0;
+  const t0 = performance.now();
 
   function resize() {
     const w = host.clientWidth, h = host.clientHeight;
@@ -85,7 +87,9 @@ export async function mountViewer({ host, canvas, drink, data, base = '' }) {
         velocity *= 0.94;
         dirty = true;
       } else if (!touched && !isStill()) {
-        spin.rotation.y += 0.0032;
+        // A small sway either side of centre: enough to show it is a real
+        // object you can turn, never enough to hide the label.
+        spin.rotation.y = Math.sin((performance.now() - t0) / 1500) * 0.16;
         dirty = true;
       }
     }
