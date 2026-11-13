@@ -14,6 +14,18 @@ const about = {
 const team = research.home.team;
 const names = team.length > 1 ? `${team.slice(0, -1).join(', ')} and ${team[team.length - 1]}` : team.join('');
 let n = 0;
+
+// The three mock-up photos are different shapes with the can at different
+// sizes. Each goes in the same 3:4 frame, cropped and zoomed so the can lands
+// in the same place at the same size (`can` in research.json says where the
+// can sits in each photo).
+const FRAME = 3 / 4;
+const canHeight = Math.max(...research.home.mockups.map((m) => m.can.h));
+const framed = research.home.mockups.map((m) => {
+  const shape = m.w / m.h;
+  const x = ((m.can.cx * shape - FRAME / 2) / (shape - FRAME)) * 100;
+  return { ...m, style: `object-position:${x.toFixed(2)}% 50%;transform:scale(${(canHeight / m.can.h).toFixed(4)});transform-origin:50% ${(m.can.cy * 100).toFixed(1)}%` };
+});
 ---
 <Base title="The research behind Ar0und." description="The MGMT 210 class research behind Ar0und: brand, customers, buyers and a survey, in sixteen pages.">
   <main id="main" class="page rs">
@@ -43,8 +55,10 @@ let n = 0;
       <section class="rs__mock">
         <h2 class="sc-display sc-display--md">The can mock-ups</h2>
         <div class="rs__mock-row">
-          {research.home.mockups.map((m) => (
-            <img src={`${base}/research/${m.file}`} alt={m.alt} width={m.w} height={m.h} loading="lazy" decoding="async" />
+          {framed.map((m) => (
+            <div class="rs__mock-card">
+              <img src={`${base}/research/${m.file}`} alt={m.alt} width={m.w} height={m.h} style={m.style} loading="lazy" decoding="async" />
+            </div>
           ))}
         </div>
         <p class="rs__mock-note">{research.home.note}</p>

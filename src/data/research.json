@@ -2954,7 +2954,12 @@
     "w": 432,
     "h": 424,
     "alt": "Ar0und Mexico can mock-up: a white can with black tile patterns, a dotted map of Mexico and line drawings of Mexico City landmarks.",
-    "shown": 216
+    "shown": 216,
+    "can": {
+     "cx": 0.514,
+     "cy": 0.508,
+     "h": 0.932
+    }
    },
    {
     "t": "img",
@@ -2962,7 +2967,12 @@
     "w": 564,
     "h": 651,
     "alt": "Ar0und Italy can mock-up: a cream can with brick-red ornament, a dotted map of Italy and line drawings of Roman landmarks.",
-    "shown": 282
+    "shown": 282,
+    "can": {
+     "cx": 0.5,
+     "cy": 0.51,
+     "h": 0.903
+    }
    },
    {
     "t": "img",
@@ -2970,7 +2980,12 @@
     "w": 1397,
     "h": 780,
     "alt": "Ar0und Japan can mock-up: a brick-red can with white floral tiles, a dotted map of Japan and line drawings of a pagoda, a torii gate and Mount Fuji.",
-    "shown": 656
+    "shown": 656,
+    "can": {
+     "cx": 0.499,
+     "cy": 0.51,
+     "h": 0.903
+    }
    }
   ],
   "note": "These mock-ups were made using Adobe photoshop, Express and then firefly to clean the images.",
