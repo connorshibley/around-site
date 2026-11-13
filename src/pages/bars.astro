@@ -1,0 +1,193 @@
+---
+// For bars and restaurants. The plan on this page is the class group's own,
+// from Units 2 and 3 of their research (business buyers, the buying process,
+// consumer influence, the target market decision); the wording is tightened
+// for a venue owner. The three figures and their sources are the ones the
+// research cites.
+import Base from '../layouts/Base.astro';
+import { drinks } from '../data/drinks.js';
+import '../styles/inner.css';
+import '../styles/bars.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const figures = [
+  {
+    value: '74%',
+    text: 'of bartenders say guests order what they recommend.',
+    source: 'CGA by NIQ',
+    href: 'https://cgastrategy.com/?p=74962',
+  },
+  {
+    value: '47%',
+    text: 'more non-alcoholic drinks added to independent restaurant menus in January 2026 than a year earlier.',
+    source: 'SpotOn, via Business Wire',
+    href: 'https://www.businesswire.com/news/home/20260318465431/en/SpotOn-Reports-Independent-Restaurants-Increased-Non-Alcoholic-Beverage-Menu-Additions-47-Year-Over-Year-as-They-Rebuild-Beverage-Profit-Margin',
+  },
+  {
+    value: '93%',
+    text: 'of people who buy non-alcoholic drinks also buy alcohol. They are your existing guests.',
+    source: 'NIQ, via ANBA',
+    href: 'https://anba.org/wp-content/uploads/2025/02/Draft-ANBA-Industry-Statistics.pdf',
+  },
+];
+
+const roles = [
+  { who: 'Whoever pours it', asks: 'Is it awkward to pour or stack?', answer: 'It is a can, a glass and ice. Simple to serve and simple to stock.' },
+  { who: 'Whoever built your cocktail list', asks: 'Does a can cut corners next to what we make ourselves?', answer: 'It adds a zero-proof option to the list you have built. It does not compete with it.' },
+  { who: 'Whoever places the order', asks: 'What does it cost, and will it show up?', answer: 'Clear case pricing, a discount on bigger orders, and dependable delivery.' },
+  { who: 'Whoever signs it off', asks: 'Is this a passing trend?', answer: 'The trial gives you real numbers from your own guests before you commit.' },
+  { who: 'Whoever vets new suppliers', asks: 'Is the paperwork in order?', answer: 'Certifications and references come with the first conversation.' },
+];
+---
+<Base
+  title="For bars and restaurants. Ar0und."
+  description="Ar0und for bars and restaurants: three zero-proof canned cocktails for the cocktail list, starting with a 90-day trial."
+>
+  <main id="main" class="page bars">
+    <section class="sc-wrap bars__hero">
+      <div class="sc-stack">
+        <p class="sc-label">For bars and restaurants</p>
+        <h1 class="sc-display">A zero-proof cocktail your menu doesn't have to invent.</h1>
+        <p class="sc-lede">Three traditional drinks, already built and canned. They sit on the cocktail list and price like one, with no recipe testing and the same drink every time.</p>
+        <p><a class="cta" href="#trial">See the 90-day trial</a></p>
+      </div>
+      <!-- Back: the cans. Front: how they read on a menu, lapping over them. -->
+      <div class="bars__show">
+        <div class="bars__cans" aria-hidden="true">
+          {drinks.map((d) => <img src={`${base}/cans/${d.key}.png`} alt="" width="720" height="1130" />)}
+        </div>
+        <div class="menu-card">
+          <p class="menu-card__head">Cocktails</p>
+          <ul>
+            {drinks.map((d) => (
+              <li>
+                <span class="menu-card__country">{d.country}</span>
+                <span class="menu-card__name">{d.name}</span>
+                <span class="menu-card__proof">0.0%</span>
+              </li>
+            ))}
+          </ul>
+          <p class="menu-card__note">How it reads on your menu: with the cocktails, one line per country. Not with the sodas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-wrap sc-section">
+      <h2 class="sc-display sc-display--lg bars__h2">Your guests already ask the bartender.</h2>
+      <ul class="bars__figures">
+        {figures.map((f) => (
+          <li>
+            <p class="bars__value">{f.value}</p>
+            <p class="bars__figure-text">{f.text}</p>
+            <p class="bars__source">Source: <a class="text-link" href={f.href} rel="noopener">{f.source}</a></p>
+          </li>
+        ))}
+      </ul>
+      <p class="bars__aside">These figures come from the sources our <a class="text-link" href={`${base}/research/marketing-research-challenge`}>market research</a> cites.</p>
+    </section>
+
+    <section class="sc-wrap bars__pair">
+      <div class="sc-stack">
+        <h2 class="sc-display sc-display--md">How it's served</h2>
+        <ul class="bars__list">
+          <li><strong>In the can, with a glass and ice.</strong> The table sees the country in bold, and nobody mistakes it for a soda.</li>
+          <li><strong>On the cocktail list.</strong> One line per country, marked 0.0%.</li>
+          <li><strong>Ready for your regulars.</strong> A bartender who knows the order can have it waiting, so no one has to ask for the non-alcoholic option out loud.</li>
+        </ul>
+      </div>
+      <div class="sc-stack">
+        <h2 class="sc-display sc-display--md">Built to a buyer's checklist</h2>
+        <ul class="bars__list">
+          <li><strong>0.0% ABV.</strong> Alcohol-free all the way, not "under 0.5%".</li>
+          <li><strong>Cases of 12.</strong></li>
+          <li><strong>Shelf-stable.</strong> Made to sit on a shelf for at least nine months.</li>
+          <li><strong>Three drinks to start.</strong> Mexico, Italy and Japan.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sc-wrap sc-section">
+      <div class="bars__partner">
+        <h2 class="sc-display sc-display--lg">A bartender behind every recipe.</h2>
+        <div class="bars__partner-body">
+          <p class="sc-lede">Each drink is made one on one with a bartender from its country of origin. They are credited on the can, paid for the recipe and take a share of the profit.</p>
+          <p class="sc-body">That gives your team a story to tell when they pour it: whose recipe it is and where it comes from. A recommendation with a story behind it is what gets a hesitant guest to try a first one.</p>
+          <p><a class="text-link" href={`${base}/research/ethics-and-social-responsibility`}>How the partnerships work</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sc-wrap bars__trial" id="trial">
+      <div class="sc-stack">
+        <h2 class="sc-display sc-display--lg">Start with a 90-day trial.</h2>
+        <ol class="bars__steps">
+          <li><span><strong>Taste it first.</strong> We follow up with pricing and send samples.</span></li>
+          <li><span><strong>Run it for 90 days.</strong> Put the drinks you choose on the menu, without committing fully.</span></li>
+          <li><span><strong>Look at the numbers.</strong> After 90 days you decide whether to keep ordering, change the mix, or drop it.</span></li>
+        </ol>
+      </div>
+
+      <form class="trial" data-trial novalidate>
+        <p class="order__banner trial__banner">
+          <strong>This is a demo request.</strong> Ar0und is a class concept, so there is no sales team. Nothing you choose here is saved or sent anywhere.
+        </p>
+        <fieldset>
+          <legend>Your venue</legend>
+          <div class="quiz__options">
+            <label class="quiz__option"><input type="radio" name="venue" value="bar" checked /> Bar</label>
+            <label class="quiz__option"><input type="radio" name="venue" value="restaurant" /> Restaurant</label>
+            <label class="quiz__option"><input type="radio" name="venue" value="grocery" /> Grocery store</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Drinks to trial</legend>
+          <div class="quiz__options">
+            {drinks.map((d) => (
+              <label class="quiz__option"><input type="checkbox" name="drink" value={d.key} checked /> {d.country}</label>
+            ))}
+          </div>
+        </fieldset>
+        <button type="submit" class="cta">Request a demo trial</button>
+        <p class="trial__result" data-trial-result role="status" hidden></p>
+        <noscript><p class="sc-body">The demo request needs JavaScript switched on in your browser.</p></noscript>
+      </form>
+    </section>
+
+    <section class="sc-wrap sc-section">
+      <h2 class="sc-display sc-display--lg bars__h2">Everyone at the table gets an answer.</h2>
+      <dl class="bars__roles">
+        {roles.map((r) => (
+          <div>
+            <dt>{r.who}</dt>
+            <dd><span class="bars__asks">{r.asks}</span> {r.answer}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="bars__aside">
+        This plan comes from the group's research:{' '}
+        <a class="text-link" href={`${base}/research/b2b-buying-process`}>the buying process</a>,{' '}
+        <a class="text-link" href={`${base}/research/business-marketing-opportunity`}>the business opportunity</a> and{' '}
+        <a class="text-link" href={`${base}/research/target-market-decision`}>why we lead with bars</a>.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    import { trialSummary } from '../lib/trial.js';
+    import { drinks } from '../data/drinks.js';
+
+    const form = document.querySelector('[data-trial]');
+    const result = document.querySelector('[data-trial-result]');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const venue = form.querySelector('input[name="venue"]:checked');
+      const keys = [...form.querySelectorAll('input[name="drink"]:checked')].map((el) => el.value);
+      const summary = trialSummary(venue ? venue.value : '', keys, drinks);
+      result.textContent = summary
+        ? `Demo request made. ${summary} Nothing was sent.`
+        : 'Pick at least one drink to trial.';
+      result.classList.toggle('is-error', !summary);
+      result.hidden = false;
+    });
+  </script>
+</Base>

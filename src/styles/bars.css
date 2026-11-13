@@ -1,0 +1,102 @@
+/* The bars and restaurants page. Same quiet inner-page language as the shop. */
+.page .bars__hero h1.sc-display { font-size: var(--sc-t-2xl); max-width: 16ch; }
+.bars__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--sc-8);
+  align-items: center;
+}
+/* Back, middle, front: a warm glow, the three cans, and the menu card lapping
+   over their lower third. */
+.bars__show { position: relative; padding-bottom: var(--sc-7); }
+.bars__cans {
+  display: flex;
+  justify-content: center;
+  padding: var(--sc-6) var(--sc-5) var(--sc-8);
+  border-radius: var(--sc-r-lg);
+  background: radial-gradient(80% 70% at 50% 45%, color-mix(in oklab, var(--ar-brick) 34%, var(--sc-surface)), var(--sc-surface) 75%);
+  box-shadow: var(--sc-e3), var(--sc-edge);
+  overflow: clip;
+}
+.bars__cans img { width: 27%; height: auto; margin-inline: 1%; }
+.bars__cans img:nth-child(2) { translate: 0 -3%; }
+.menu-card {
+  position: relative;
+  width: min(100% - 2rem, 27rem);
+  margin: calc(var(--sc-8) * -1 - var(--sc-4)) auto 0;
+  padding: var(--sc-5) var(--sc-6);
+  background: var(--sc-ink);
+  color: var(--sc-canvas);
+  border-radius: var(--sc-r-md);
+  box-shadow: var(--sc-e3);
+  rotate: -1.5deg;
+}
+.menu-card > * { margin: 0; }
+.menu-card__head { font-family: var(--sc-font-display); font-size: var(--sc-t-lg); padding-bottom: var(--sc-2); border-bottom: 1px solid color-mix(in oklab, var(--sc-canvas) 25%, transparent); }
+.menu-card ul { list-style: none; padding: 0; margin: var(--sc-2) 0 0; }
+.menu-card li { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr) auto; gap: var(--sc-3); align-items: baseline; padding-block: var(--sc-2); font-size: var(--sc-t-sm); }
+.menu-card__country { font-size: var(--sc-t-xs); letter-spacing: var(--sc-track-wide); text-transform: uppercase; font-weight: 700; }
+.menu-card__name { font-weight: 600; }
+.menu-card__proof { font-variant-numeric: tabular-nums; font-weight: 700; }
+.menu-card__note { margin-top: var(--sc-3); padding-top: var(--sc-3); border-top: 1px solid color-mix(in oklab, var(--sc-canvas) 25%, transparent); font-size: var(--sc-t-xs); color: color-mix(in oklab, var(--sc-canvas) 78%, transparent); }
+
+.bars__h2 { max-width: 20ch; margin: 0; }
+.bars__figures { list-style: none; margin: var(--sc-7) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sc-7); }
+.bars__figures li { padding-top: var(--sc-4); border-top: 1px solid var(--sc-hairline-strong); }
+.bars__figures p { margin: 0; }
+.bars__value { font-family: var(--sc-font-display); font-size: var(--sc-t-3xl); line-height: 1; font-variant-numeric: tabular-nums; }
+.bars__figure-text { margin-top: var(--sc-3) !important; }
+.bars__source { margin-top: var(--sc-2) !important; font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
+.bars__aside { margin: var(--sc-6) 0 0; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); max-width: 52rem; }
+
+.bars__pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--sc-8); align-items: start; }
+.bars__list { list-style: none; margin: var(--sc-5) 0 0; padding: 0; display: grid; }
+.bars__list li { padding-block: var(--sc-3); border-top: 1px solid var(--sc-hairline); line-height: 1.5; }
+
+.bars__partner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--sc-8);
+  align-items: start;
+  padding: var(--sc-8) var(--sc-7);
+  background: var(--ar-brick-deep);
+  border-radius: var(--sc-r-lg);
+  box-shadow: var(--sc-e3), var(--sc-edge);
+}
+.bars__partner h2 { margin: 0; }
+.bars__partner-body { display: grid; gap: var(--sc-4); }
+.bars__partner-body > * { margin: 0; }
+.bars__partner .text-link { color: var(--sc-ink); }
+
+.bars__trial { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--sc-8); align-items: start; scroll-margin-top: calc(var(--ar-bar-h) + var(--sc-5)); }
+.bars__steps { margin: var(--sc-5) 0 0; padding: 0; list-style: none; counter-reset: step; display: grid; }
+.bars__steps li { counter-increment: step; display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); padding-block: var(--sc-4); border-top: 1px solid var(--sc-hairline); line-height: 1.5; }
+.bars__steps li::before { content: counter(step); font-family: var(--sc-font-display); font-size: var(--sc-t-xl); line-height: 1; }
+.trial { display: grid; gap: var(--sc-5); justify-items: start; padding: var(--sc-6); background: var(--sc-surface); border-radius: var(--sc-r-lg); box-shadow: var(--sc-e2), var(--sc-edge); }
+.trial fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.trial legend { padding: 0; margin-bottom: var(--sc-3); font-weight: 650; }
+.trial__banner { margin: 0; background: var(--sc-canvas); font-size: var(--sc-t-sm); }
+/* The shop's option chips hide their input; here a tick still needs to show. */
+.trial .quiz__option { display: inline-flex; align-items: center; gap: var(--sc-2); min-height: 2.75rem; }
+.trial .quiz__option input { position: static; opacity: 1; width: 1.1rem; height: 1.1rem; accent-color: var(--sc-ink); }
+.trial__result { margin: 0; padding: var(--sc-4) var(--sc-5); border-left: 3px solid var(--sc-ink); background: var(--sc-canvas); border-radius: 0 var(--sc-r-md) var(--sc-r-md) 0; }
+.trial__result[hidden] { display: none; }
+
+.bars__roles { margin: var(--sc-6) 0 0; display: grid; }
+.bars__roles > div { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr); gap: var(--sc-6); padding-block: var(--sc-4); border-top: 1px solid var(--sc-hairline); }
+.bars__roles dt { font-weight: 650; }
+.bars__roles dd { margin: 0; line-height: 1.55; }
+.bars__asks { color: var(--sc-ink-soft); font-style: italic; }
+
+@media (max-width: 860px) {
+  .bars__hero,
+  .bars__pair,
+  .bars__partner,
+  .bars__trial { grid-template-columns: 1fr; gap: var(--sc-6); }
+  .bars__figures { grid-template-columns: 1fr; gap: var(--sc-5); margin-top: var(--sc-5); }
+  .bars__partner { padding: var(--sc-6) var(--sc-5); }
+  .bars__roles > div { grid-template-columns: 1fr; gap: var(--sc-1); }
+  .menu-card { padding: var(--sc-4) var(--sc-5); }
+  .menu-card li { grid-template-columns: 4rem minmax(0, 1fr) auto; }
+  .trial { padding: var(--sc-5); }
+}
