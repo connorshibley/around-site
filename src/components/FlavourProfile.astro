@@ -1,0 +1,15 @@
+---
+// Five-point flavour profile, drawn in the brand's dots.
+const { profile } = Astro.props;
+const rows = Object.entries(profile);
+---
+<ul class="profile">
+  {rows.map(([name, value]) => (
+    <li>
+      <span class="profile__name">{name}</span>
+      <span class="profile__dots" role="img" aria-label={`${value} out of 5`}>
+        {[1, 2, 3, 4, 5].map((n) => <span class={n <= value ? 'is-on' : ''} />)}
+      </span>
+    </li>
+  ))}
+</ul>

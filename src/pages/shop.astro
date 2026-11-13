@@ -1,0 +1,114 @@
+---
+import Base from '../layouts/Base.astro';
+import PackPicker from '../components/PackPicker.astro';
+import { drinks, starter } from '../data/drinks.js';
+import '../styles/inner.css';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const money = (cents) => '$' + (cents / 100).toFixed(2);
+// Each answer points at one drink. The words come from the three posters.
+const questions = [
+  {
+    q: 'Where would you rather be right now?',
+    a: { mexico: 'A courtyard in Mexico at sunset', italy: 'A terrace above Rome', japan: 'A lakeside in Japan at dusk' },
+  },
+  {
+    q: 'Pick three words.',
+    a: Object.fromEntries(drinks.map((d) => [d.key, d.line])),
+  },
+  {
+    q: "What's on the table?",
+    a: { mexico: 'Lime and sea salt', italy: 'A slice of orange', japan: 'A twist of yuzu peel' },
+  },
+];
+---
+<Base title="Shop the cans. Ar0und." cta={false}>
+  <main id="main" class="page">
+    <section class="sc-wrap sc-stack shop__head">
+      <h1 class="sc-display">Shop the cans.</h1>
+      <p class="sc-lede">Three drinks, three places. Take four, eight or twelve of one, or start with two of each.</p>
+    </section>
+
+    <section class="sc-wrap shop__grid" id="drinks" aria-label="The drinks">
+      {drinks.map((d) => (
+        <article class="product">
+          <a class="product__art" href={`${base}/drinks/${d.key}`}>
+            <img src={`${base}/cans/${d.key}.png`} alt={`The ${d.country} can`} width="720" height="1130" />
+          </a>
+          <p class="sc-label">{d.country}</p>
+          <h2 class="sc-display sc-display--md"><a href={`${base}/drinks/${d.key}`}>{d.name}</a></h2>
+          <p class="product__line">{d.line}</p>
+          <PackPicker drink={d} compact />
+        </article>
+      ))}
+    </section>
+
+    <section class="sc-wrap starter" aria-labelledby="starter-title">
+      <div class="starter__art" aria-hidden="true">
+        {drinks.map((d) => <img src={`${base}/cans/${d.key}.png`} alt="" width="720" height="1130" loading="lazy" />)}
+      </div>
+      <div class="sc-stack">
+        <h2 class="sc-display sc-display--lg" id="starter-title">{starter.name}</h2>
+        <p class="sc-lede">Can't pick a country? {starter.detail}.</p>
+        <p class="starter__price">{money(starter.cents)}</p>
+        <button type="button" class="cta" data-add={starter.sku}>Add to cart</button>
+      </div>
+    </section>
+
+    <section class="sc-wrap quiz" aria-labelledby="quiz-title">
+      <div class="sc-stack">
+        <h2 class="sc-display sc-display--lg" id="quiz-title">Where to first?</h2>
+        <p class="sc-body">Three quick questions and we'll point you at a can.</p>
+      </div>
+      <form class="quiz__form" data-quiz>
+        {questions.map((item, i) => (
+          <fieldset>
+            <legend>{item.q}</legend>
+            <div class="quiz__options">
+              {Object.entries(item.a).map(([key, text]) => (
+                <label class="quiz__option">
+                  <input type="radio" name={`q${i}`} value={key} />
+                  <span>{text}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+        ))}
+        <div class="quiz__result" data-quiz-result hidden aria-live="polite">
+          {drinks.map((d) => (
+            <div class="quiz__pick" data-pick={d.key} hidden>
+              <img src={`${base}/cans/${d.key}.png`} alt="" width="720" height="1130" loading="lazy" />
+              <div class="sc-stack">
+                <p class="sc-label">Your first stop</p>
+                <p class="sc-display sc-display--md">Start in {d.country}.</p>
+                <p class="sc-body">{d.name}. {d.taste}</p>
+                <div class="quiz__actions">
+                  <button type="button" class="cta" data-add={`${d.key}-4`}>Add to cart</button>
+                  <a class="text-link" href={`${base}/drinks/${d.key}`}>See the {d.short}</a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    import { recommend } from '../lib/quiz.js';
+    const form = document.querySelector('[data-quiz]');
+    if (form) {
+      const result = form.querySelector('[data-quiz-result]');
+      const total = form.querySelectorAll('fieldset').length;
+      form.addEventListener('change', () => {
+        const answers = [...form.querySelectorAll('input[type="radio"]:checked')].map((i) => i.value);
+        if (answers.length < total) return; // wait until all three are answered
+        const pick = recommend(answers);
+        result.hidden = false;
+        result.querySelectorAll('[data-pick]').forEach((el) => {
+          el.hidden = el.dataset.pick !== pick;
+        });
+      });
+    }
+  </script>
+</Base>

@@ -1,0 +1,19 @@
+---
+// A country drawn as the dotted map from its can label.
+import data from '../data/globe-dots.json';
+
+const { country } = Astro.props;
+const c = data.countries[country];
+const H = 300;
+const W = Math.round(H * c.aspect);
+const r = ((H / c.rows) * 0.36).toFixed(2);
+const dots = [];
+for (let i = 0; i < c.dots.length; i += 2) {
+  dots.push({ cx: ((c.dots[i] / 1000) * W).toFixed(1), cy: ((c.dots[i + 1] / 1000) * H).toFixed(1) });
+}
+---
+<svg class="country-dots" viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
+  <g fill="currentColor">
+    {dots.map((d) => <circle cx={d.cx} cy={d.cy} r={r} />)}
+  </g>
+</svg>

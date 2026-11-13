@@ -1,0 +1,133 @@
+---
+import Base from '../layouts/Base.astro';
+import Wordmark from '../components/Wordmark.astro';
+import CountryDots from '../components/CountryDots.astro';
+import { drinks } from '../data/drinks.js';
+import '../styles/home.css';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+// Where each landing's words appear inside the trip act (see LANDINGS in
+// src/scripts/scene/stage.js: the words arrive as the can clears the globe).
+const cues = ['0.121 0.31 0.25 0.25', '0.431 0.62 0.25 0.25', '0.741 0.93 0.25 0.25'];
+const sides = ['lead', 'trail', 'lead'];
+---
+<Base
+  home
+  title="Ar0und. The world's cocktails, zero proof."
+  description="Non-alcoholic canned cocktails built on traditional drinks from Mexico, Italy and Japan."
+>
+  <!-- The one fixed 3D stage. Decorative: every word on the page is real HTML. -->
+  <div class="world" data-world aria-hidden="true"><canvas></canvas></div>
+
+  <main id="main">
+    <!-- 1. ARRIVE: recognition -->
+    <section id="arrive" data-sc-act="pin" data-sc-span="1.7" data-sc-drift="#140e0c">
+      <div data-sc-stage class="arrive">
+        <img class="arrive__poster" src={`${base}/posters/globe.svg`} alt="" width="1000" height="1000" />
+        <div class="sc-copy arrive__copy" data-sc-cue="0 0.82 0">
+          <h1 class="sc-display arrive__title">The world's cocktails. Zero proof.</h1>
+          <p class="sc-lede">Traditional drinks from Mexico, Italy and Japan, rebuilt without the alcohol. Canned, sealed, ready for any occasion.</p>
+          <a class="cta" href={`${base}/shop`}>Shop the cans</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TENSION: the frustration, named. The quiet act before the peak. -->
+    <section id="tension" data-sc-act="pin" data-sc-span="2.3" data-sc-drift="#110b0a">
+      <div data-sc-stage class="tension">
+        <div class="tension__lines">
+          <p class="sc-display sc-display--lg" data-sc-cue="0 0.4 0" data-sc-kinetic="lines">You didn't ask for a mocktail.</p>
+          <p class="sc-display sc-display--lg" data-sc-cue="0.34 0.72" data-sc-kinetic="lines">You asked for something worth ordering.</p>
+          <p class="sc-display sc-display--lg" data-sc-cue="0.66 1 0.3 0" data-sc-kinetic="lines">So we went looking. Everywhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE TRIP: the peak. The globe turns and hands over each can. -->
+    <section id="trip" data-sc-act="pin" data-sc-span="6.2" data-sc-drift="#1c110d" aria-label="Three stops around the world">
+      <div data-sc-stage class="trip">
+        {drinks.map((d, i) => (
+          <div class={`sc-copy trip__stop trip__stop--${sides[i]}`} data-sc-cue={cues[i]}>
+            <h2 class="sc-display sc-display--lg">{d.country}</h2>
+            <p class="trip__name">{d.name}</p>
+            <p class="trip__line">{d.line}</p>
+            <p class="trip__more"><a class="text-link" href={`${base}/drinks/${d.key}`}>See the {d.short}</a></p>
+            <img class="trip__still" src={`${base}/cans/${d.key}.png`} alt="" width="720" height="1130" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 4. SUBSTANCE: trust -->
+    <section id="substance" class="sc-section substance" data-sc-act="flow" data-sc-drift="#150e0c">
+      <div class="sc-wrap substance__grid">
+        <div class="sc-stack" data-sc-in data-sc-stagger="70">
+          <h2 class="sc-display sc-display--lg">A real cocktail, minus one ingredient.</h2>
+          <p class="sc-lede">Each Ar0und is built on a traditional drink from the place on the can, made fully alcohol-free, then canned and sealed.</p>
+          <ul class="substance__facts">
+            <li>Alcohol-free. All the way.</li>
+            <li>Recipes with a home town.</li>
+            <li>Not too sweet.</li>
+          </ul>
+        </div>
+        <figure class="substance__map" data-sc-reveal="left" data-sc-reveal-at="0.16 0.52">
+          {drinks.map((d) => (
+            <div class="substance__country">
+              <CountryDots country={d.key} />
+              <figcaption>{d.country}</figcaption>
+            </div>
+          ))}
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. RANGE: appetite. Sideways travel reads as "options". -->
+    <section id="range" data-sc-act="pan" data-sc-span="3.6" data-sc-drift="#1a110e">
+      <div data-sc-stage class="range">
+        <div class="range__rail" data-sc-pan="0.04">
+          <div class="range__lead sc-stack">
+            <h2 class="sc-display sc-display--lg">Three stops so far.</h2>
+            <p class="sc-body">One can from each. Start wherever you'd rather be.</p>
+          </div>
+          {drinks.map((d) => (
+            <article class="range__item">
+              <div class="range__art" data-sc-tilt="6">
+                <img data-can-still={d.key} alt={`The ${d.country} can: ${d.name}`} width="720" height="1130" src={`${base}/cans/${d.key}.png`} />
+              </div>
+              <h3 class="sc-display sc-display--md">{d.country}</h3>
+              <p class="range__name">{d.name}</p>
+              <p class="range__line">{d.line}</p>
+              <p class="range__more"><a class="text-link" href={`${base}/drinks/${d.key}`}>See the {d.short}</a></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CLOSE: resolve. The globe becomes the O in the wordmark and holds. -->
+    <section id="close" data-sc-act="pin" data-sc-span="1.25" data-sc-drift="#5a271f">
+      <div data-sc-stage class="close">
+        <div class="close__inner">
+          <h2 class="close__mark" aria-label="Ar0und">
+            <span aria-hidden="true">AR</span><span class="close__gap" data-globe-gap aria-hidden="true"></span><span aria-hidden="true">UND</span>
+          </h2>
+          <p class="close__line">Sip the world.</p>
+          <a class="cta" href={`${base}/shop`}>Shop the cans</a>
+        </div>
+        <footer class="site-foot close__foot">
+          <p class="site-foot__note">Ar0und is a class concept for MGMT 210. Nothing on this site is for sale.</p>
+          <nav aria-label="Site">
+            <a href={`${base}/shop`}>Shop</a>
+            <a href={`${base}/cart`}>Cart</a>
+            <button type="button" data-motion-toggle aria-pressed="false">Motion: on</button>
+          </nav>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script is:inline src={`${base}/engine/scrollcraft.js`}></script>
+  <script>
+    import '../scripts/home.js';
+  </script>
+</Base>

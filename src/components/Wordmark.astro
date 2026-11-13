@@ -1,0 +1,32 @@
+---
+// AR + dot globe + UND. The globe glyph is the same dot-matrix world as the
+// live 3D globe, projected flat at build time.
+import data from '../data/globe-dots.json';
+
+const { label = 'Ar0und' } = Astro.props;
+const rad = Math.PI / 180;
+const centerLat = 12;
+const centerLon = -55;
+const cl = Math.cos(centerLat * rad);
+const sl = Math.sin(centerLat * rad);
+const dots = [];
+for (let i = 0; i < data.glyph.length; i += 2) {
+  const lat = (data.glyph[i] / 100) * rad;
+  const dLon = (data.glyph[i + 1] / 100 - centerLon) * rad;
+  const x = Math.cos(lat) * Math.sin(dLon);
+  const y = cl * Math.sin(lat) - sl * Math.cos(lat) * Math.cos(dLon);
+  const z = sl * Math.sin(lat) + cl * Math.cos(lat) * Math.cos(dLon);
+  if (z <= 0.12) continue;
+  dots.push({ cx: (50 + x * 41).toFixed(1), cy: (50 - y * 41).toFixed(1) });
+}
+---
+<span class="wordmark" role="img" aria-label={label}>
+  <span aria-hidden="true">AR</span>
+  <svg viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="7" />
+    <g fill="currentColor">
+      {dots.map((d) => <circle cx={d.cx} cy={d.cy} r="2.9" />)}
+    </g>
+  </svg>
+  <span aria-hidden="true">UND</span>
+</span>

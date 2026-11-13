@@ -1,0 +1,64 @@
+---
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/montserrat';
+import '../styles/tokens.css';
+import Wordmark from '../components/Wordmark.astro';
+
+const {
+  title = 'Ar0und. Sip the world.',
+  description = 'Non-alcoholic canned cocktails built on traditional drinks from around the world.',
+  home = false, // the home page carries its own footer inside its last act
+  cta = true, // hide the "Shop the cans" button on pages that are already the shop
+} = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en" data-base={base}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#140e0c" />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    <link rel="stylesheet" href={`${base}/engine/scrollcraft.css`} />
+    <!-- Motion preference is applied before first paint so nothing flashes. -->
+    <script is:inline>
+      try {
+        if (localStorage.getItem('around-motion') === 'off') {
+          document.documentElement.dataset.motion = 'off';
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="sc-grain" aria-hidden="true"></div>
+    <header class={`bar ${home ? '' : 'bar--solid'}`}>
+      <a class="bar__mark" href={`${base}/`}><Wordmark /></a>
+      <nav class="bar__nav" aria-label="Main">
+        {!home && <a class="bar__link" href={`${base}/shop`}>Shop</a>}
+        <a class="bar__link bar__cart" href={`${base}/cart`} data-cart-link aria-label="Cart, 0 packs">
+          Cart <span class="bar__count" data-cart-count aria-hidden="true">0</span>
+        </a>
+        {cta && <a class="cta cta--small" href={`${base}/shop`}>Shop the cans</a>}
+      </nav>
+    </header>
+    <slot />
+    {!home && (
+      <footer class="site-foot">
+        <p class="site-foot__note">Ar0und is a class concept for MGMT 210. Nothing on this site is for sale.</p>
+        <nav aria-label="Site">
+          <a href={`${base}/`}>Home</a>
+          <a href={`${base}/shop`}>Shop</a>
+          <a href={`${base}/cart`}>Cart</a>
+          <button type="button" data-motion-toggle aria-pressed="false">Motion: on</button>
+        </nav>
+      </footer>
+    )}
+    <p class="visually-hidden" aria-live="polite" data-live></p>
+    <script>
+      import '../scripts/site.js';
+    </script>
+  </body>
+</html>

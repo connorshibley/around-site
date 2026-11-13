@@ -1,0 +1,97 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/inner.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title="Your cart. Ar0und." cta={false}>
+  <main id="main" class="page">
+    <section class="sc-wrap sc-stack order">
+      <h1 class="sc-display">Your cart.</h1>
+
+      <div data-cart-empty hidden class="sc-stack">
+        <p class="sc-lede">Nothing in it yet.</p>
+        <p><a class="cta" href={`${base}/shop`}>Shop the cans</a></p>
+      </div>
+
+      <div data-cart-full hidden class="order__grid">
+        <ul class="order__lines" data-cart-lines aria-label="Items in your cart"></ul>
+        <aside class="order__summary" aria-label="Order summary">
+          <dl>
+            <div><dt>Cans</dt><dd data-cart-cans></dd></div>
+            <div><dt>Shipping</dt><dd>Not charged in this demo</dd></div>
+            <div class="order__total"><dt>Subtotal</dt><dd data-cart-subtotal></dd></div>
+          </dl>
+          <a class="cta" href={`${base}/checkout`}>Checkout</a>
+          <p class="order__note">Demo store. No payment is taken and nothing ships.</p>
+        </aside>
+      </div>
+
+      <noscript><p class="sc-body">The cart needs JavaScript switched on in your browser.</p></noscript>
+    </section>
+  </main>
+
+  <script>
+    import { cart, catalog, formatMoney } from '../scripts/site.js';
+    const base = (document.documentElement.dataset.base || '').replace(/\/$/, '');
+    const list = document.querySelector('[data-cart-lines]');
+    const empty = document.querySelector('[data-cart-empty]');
+    const full = document.querySelector('[data-cart-full]');
+    const el = (tag, cls, text) => {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text != null) n.textContent = text;
+      return n;
+    };
+
+    function render() {
+      const lines = cart.lines();
+      const t = cart.totals();
+      empty.hidden = lines.length > 0;
+      full.hidden = lines.length === 0;
+      list.replaceChildren(
+        ...lines.map((line) => {
+          const li = el('li', 'order__line');
+          const key = catalog[line.sku].key;
+          const art = el('div', key === 'starter' ? 'order__art order__art--trio' : 'order__art');
+          for (const k of key === 'starter' ? ['mexico', 'italy', 'japan'] : [key]) {
+            const img = el('img');
+            img.src = `${base}/cans/${k}.png`;
+            img.alt = '';
+            art.append(img);
+          }
+          li.append(art);
+
+          const info = el('div', 'order__info');
+          info.append(
+            el('p', 'order__name', line.name),
+            el('p', 'order__detail', `${line.detail} · ${formatMoney(line.cents)}`)
+          );
+          const qty = el('div', 'order__qty');
+          const less = el('button', '', '−');
+          less.type = 'button';
+          less.setAttribute('aria-label', `One fewer ${line.name} ${line.detail}`);
+          less.addEventListener('click', () => cart.set(line.sku, line.qty - 1));
+          const count = el('span', '', String(line.qty));
+          count.setAttribute('aria-label', `Quantity ${line.qty}`);
+          const more = el('button', '', '+');
+          more.type = 'button';
+          more.setAttribute('aria-label', `One more ${line.name} ${line.detail}`);
+          more.addEventListener('click', () => cart.set(line.sku, line.qty + 1));
+          qty.append(less, count, more);
+          const remove = el('button', 'order__remove', 'Remove');
+          remove.type = 'button';
+          remove.setAttribute('aria-label', `Remove ${line.name} ${line.detail}`);
+          remove.addEventListener('click', () => cart.set(line.sku, 0));
+          info.append(qty, remove);
+
+          li.append(info, el('p', 'order__price', formatMoney(line.lineCents)));
+          return li;
+        })
+      );
+      document.querySelector('[data-cart-cans]').textContent = String(t.cans);
+      document.querySelector('[data-cart-subtotal]').textContent = formatMoney(t.subtotalCents);
+    }
+    document.addEventListener('around:cart', render);
+    render();
+  </script>
+</Base>

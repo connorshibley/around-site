@@ -1,0 +1,25 @@
+---
+// Unlisted page: the Ar0und wordmark on its three grounds. The logo image
+// files in public/brand/ are captured from this page by scripts/capture-stills.mjs.
+import Base from '../layouts/Base.astro';
+import Wordmark from '../components/Wordmark.astro';
+---
+<Base title="Brand. Ar0und.">
+  <main id="main" class="page sc-wrap sc-stack">
+    <h1 class="sc-display">The mark.</h1>
+    <p class="sc-body">AR, a dot-matrix globe, UND. The globe is the same one that turns on the home page.</p>
+    <div class="brand-grid">
+      <div class="brand-tile brand-tile--brick" data-logo="logo-on-brick"><Wordmark /></div>
+      <div class="brand-tile brand-tile--dark" data-logo="logo-on-dark"><Wordmark /></div>
+      <div class="brand-tile brand-tile--cream" data-logo="logo-on-cream"><Wordmark /></div>
+    </div>
+  </main>
+</Base>
+<style>
+  .brand-grid { display: grid; gap: var(--sc-5); grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); margin-top: var(--sc-7); }
+  .brand-tile { display: grid; place-items: center; aspect-ratio: 16 / 9; border-radius: var(--sc-r-lg); font-size: 2.6rem; }
+  .brand-tile :global(.wordmark) { font-size: 1em; }
+  .brand-tile--brick { background: var(--ar-brick); color: #fff; }
+  .brand-tile--dark { background: #140e0c; color: var(--sc-ink); box-shadow: var(--sc-edge); border: 1px solid var(--sc-hairline); }
+  .brand-tile--cream { background: #f1e9dc; color: var(--ar-brick); }
+</style>

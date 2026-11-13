@@ -1,0 +1,182 @@
+/* Home page composition. Scrollcraft's device classes (.sc-stage, .sc-copy,
+   [data-sc-*]) are the mechanism and are not restyled here; these are the
+   page's own classes. */
+
+/* ---- the fixed 3D stage ---------------------------------------------------- */
+.world {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+.world canvas { width: 100%; height: 100%; }
+.no-world .world { display: none; }
+/* Everything in the page sits above the world. */
+main { position: relative; z-index: 1; }
+
+/* ---- 1. arrive ------------------------------------------------------------- */
+.arrive__copy {
+  top: 50%;
+  translate: 0 -46%;
+  max-width: min(41rem, 52vw);
+  display: grid;
+  gap: var(--sc-5);
+  justify-items: start;
+}
+.arrive__title {
+  font-size: clamp(2.7rem, 1.5rem + 4.6vw, 5.1rem);
+  font-weight: 480;
+  line-height: 0.98;
+}
+.arrive__copy .sc-lede { color: var(--sc-ink-soft); max-width: 40ch; }
+
+/* The still globe holds the frame until the live one is ready, and stays if
+   WebGL is unavailable. Sized and placed to match the live globe's opening pose. */
+.arrive__poster {
+  position: absolute;
+  width: 76svh;
+  height: 76svh;
+  max-width: none;
+  left: calc(50% + 4svh);
+  top: calc(52% - 38svh);
+  transition: opacity 500ms var(--sc-ease-out);
+}
+.world-ready .arrive__poster { opacity: 0; }
+
+/* ---- 2. tension ------------------------------------------------------------ */
+.tension { display: grid; place-items: center; }
+.tension__lines {
+  display: grid;
+  width: min(100% - 2 * var(--sc-gutter), 58rem);
+  text-align: center;
+}
+.tension__lines > p { grid-area: 1 / 1; align-self: center; font-weight: 440; }
+
+/* ---- 3. the trip ----------------------------------------------------------- */
+.trip__stop { max-width: min(24rem, 30vw); display: grid; gap: var(--sc-2); }
+.trip__stop--lead { left: var(--sc-gutter); top: 44%; translate: 0 -50%; }
+.trip__stop--trail { inset-inline: auto; right: var(--sc-gutter); top: 44%; translate: 0 -50%; text-align: right; }
+.trip__stop h2 { font-weight: 480; }
+.trip__name { margin: 0; font-size: var(--sc-t-lg); font-weight: 600; letter-spacing: var(--sc-track-snug); }
+.trip__line { margin: 0; color: var(--sc-ink-soft); }
+.trip__more { margin: var(--sc-3) 0 0; }
+/* The captured still of the can. Only shown when the live 3D stage is not
+   running, so the trip still shows the product. */
+.trip__still { display: none; }
+.no-world .trip__still { display: block; width: min(11rem, 40vw); height: auto; margin-top: var(--sc-5); }
+.no-world .trip__stop--trail .trip__still { margin-left: auto; }
+
+/* ---- 4. substance ---------------------------------------------------------- */
+.substance { background: transparent; }
+.substance__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: var(--sc-8);
+  align-items: center;
+}
+.substance__facts {
+  list-style: none;
+  margin: var(--sc-6) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--sc-3);
+  font-weight: 600;
+}
+.substance__facts li {
+  padding-top: var(--sc-3);
+  border-top: 1px solid var(--sc-hairline);
+}
+.substance__map {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.9fr;
+  gap: var(--sc-5);
+  align-items: end;
+  padding: var(--sc-7) var(--sc-6);
+  background: var(--sc-surface);
+  border-radius: var(--sc-r-lg);
+  box-shadow: var(--sc-e3), var(--sc-edge);
+  /* breaks the edge of its column: front, middle, back */
+  margin-right: calc(var(--sc-gutter) * -0.5);
+  translate: 0 var(--sc-6);
+}
+.substance__country { display: grid; gap: var(--sc-3); justify-items: center; color: var(--sc-ink); }
+.substance__country figcaption {
+  font-size: var(--sc-t-xs);
+  letter-spacing: var(--sc-track-wide);
+  text-transform: uppercase;
+  color: var(--sc-ink-soft);
+}
+.country-dots { width: 100%; height: auto; max-height: 13rem; }
+
+/* ---- 5. range -------------------------------------------------------------- */
+.range { display: flex; align-items: center; }
+.range__rail { align-items: center; gap: clamp(2rem, 5vw, 5rem); padding-inline: var(--sc-gutter); }
+.range__lead { flex: none; width: min(26rem, 78vw); }
+.range__item { flex: none; width: clamp(15rem, 24vw, 21rem); display: grid; gap: var(--sc-2); }
+.range__art {
+  background: var(--sc-surface);
+  border-radius: var(--sc-r-lg);
+  box-shadow: var(--sc-e2), var(--sc-edge);
+  margin-bottom: var(--sc-4);
+  padding: var(--sc-5) var(--sc-5) 0;
+  overflow: clip;
+}
+.range__art img { width: 100%; height: auto; aspect-ratio: 720 / 1130; object-fit: contain; translate: 0 6%; }
+.range__item h3 { font-weight: 480; }
+.range__name { margin: 0; font-weight: 600; }
+.range__line { margin: 0; color: var(--sc-ink-soft); font-size: var(--sc-t-sm); }
+.range__more { margin: var(--sc-2) 0 0; font-size: var(--sc-t-sm); }
+
+/* ---- 6. close -------------------------------------------------------------- */
+.close { display: grid; grid-template-rows: 1fr auto; }
+.close__inner { display: grid; place-content: center; justify-items: center; gap: var(--sc-5); text-align: center; padding-top: var(--ar-bar-h); }
+.close__mark {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-family: var(--sc-font-text);
+  font-weight: 900;
+  font-size: clamp(3.4rem, 15.5vw, 14rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+/* The hole in the wordmark. The live globe is fitted to this box every frame. */
+.close__gap {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-inline: 0.035em;
+  border-radius: 50%;
+}
+/* Without the live globe, the gap carries the still one. */
+.no-world .close__gap { background: center / contain no-repeat url("/posters/globe.svg"); }
+.close__line { margin: 0; font-family: var(--sc-font-display); font-size: var(--sc-t-xl); font-weight: 440; }
+.close__foot { color: color-mix(in oklab, var(--sc-ink) 78%, transparent); }
+
+/* ---- motion switched off (footer toggle) ------------------------------------ */
+[data-motion="off"] [data-sc-tilt] { transform: none !important; }
+
+/* ---- phone ----------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .arrive__copy { top: calc(var(--ar-bar-h) + 6svh); translate: none; max-width: none; gap: var(--sc-4); }
+  .arrive__poster { width: 57svh; height: 57svh; left: calc(50% - 28.5svh); top: calc(50% + 33svh - 28.5svh); }
+
+  .trip__stop,
+  .trip__stop--lead,
+  .trip__stop--trail {
+    inset-inline: var(--sc-gutter);
+    right: auto;
+    top: calc(var(--ar-bar-h) + 3svh);
+    translate: none;
+    max-width: none;
+    text-align: left;
+  }
+
+  .substance__grid { grid-template-columns: 1fr; gap: var(--sc-7); }
+  .substance__map { margin-right: 0; translate: none; padding: var(--sc-6) var(--sc-5); }
+
+  .range__item { width: 68vw; }
+}

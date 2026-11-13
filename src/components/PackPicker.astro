@@ -1,0 +1,23 @@
+---
+// Pick a pack size, add it to the cart. Works as a plain form of radios; the
+// shared site script reads the checked one when the button is pressed.
+import { packs } from '../data/drinks.js';
+
+const { drink, compact = false } = Astro.props;
+const money = (cents) => '$' + (cents / 100).toFixed(2);
+---
+<form class={`packs ${compact ? 'packs--compact' : ''}`}>
+  <fieldset>
+    <legend>Pack size</legend>
+    <div class="packs__options">
+      {packs.map((p, i) => (
+        <label class="packs__option">
+          <input type="radio" name={`pack-${drink.key}`} value={`${drink.key}-${p.size}`} checked={i === 0} />
+          <span class="packs__size">{p.size} cans</span>
+          <span class="packs__price">{money(p.cents)}</span>
+        </label>
+      ))}
+    </div>
+  </fieldset>
+  <button type="button" class="cta" data-add-from-form>Add to cart</button>
+</form>

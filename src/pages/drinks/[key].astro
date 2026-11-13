@@ -1,0 +1,99 @@
+---
+import Base from '../../layouts/Base.astro';
+import PackPicker from '../../components/PackPicker.astro';
+import FlavourProfile from '../../components/FlavourProfile.astro';
+import CountryDots from '../../components/CountryDots.astro';
+import { drinks, drinkByKey } from '../../data/drinks.js';
+import '../../styles/inner.css';
+
+export function getStaticPaths() {
+  return drinks.map((d) => ({ params: { key: d.key }, props: { drink: d } }));
+}
+const { drink } = Astro.props;
+const next = drinkByKey[drink.tryNext];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title={`${drink.name}. Ar0und.`} description={`${drink.name}: ${drink.taste}`}>
+  <main id="main" class="page">
+    <section class="sc-wrap drink">
+      <div class="drink__stage">
+        <div
+          class="viewer"
+          data-viewer={drink.key}
+          tabindex="0"
+          role="img"
+          aria-label={`The ${drink.country} can. Drag it, or use the left and right arrow keys, to turn it.`}
+        >
+          <img src={`${base}/cans/${drink.key}.png`} alt="" width="720" height="1130" />
+          <canvas></canvas>
+        </div>
+        <p class="drink__hint">Drag to turn the can</p>
+      </div>
+      <div class="drink__copy sc-stack">
+        <p class="sc-label">{drink.country}</p>
+        <h1 class="sc-display drink__title">{drink.name}</h1>
+        <p class="sc-lede">{drink.line}</p>
+        <p class="sc-body">{drink.taste}</p>
+        <PackPicker drink={drink} />
+      </div>
+    </section>
+
+    <section class="sc-wrap sc-section drink__facts">
+      <div class="sc-stack">
+        <h2 class="sc-display sc-display--md">Where it comes from</h2>
+        <p class="sc-body">{drink.origin}</p>
+        <div class="drink__map"><CountryDots country={drink.key} /></div>
+      </div>
+      <div class="sc-stack">
+        <h2 class="sc-display sc-display--md">How it tastes</h2>
+        <FlavourProfile profile={drink.profile} />
+        <p class="drink__zero">Alcohol-free. All the way.</p>
+      </div>
+    </section>
+
+    <section class="sc-wrap drink__poster">
+      <figure>
+        <img
+          src={`${base}/posters/${drink.key}.jpg`}
+          alt={`Campaign poster: Taste ${drink.country}. The ${drink.name} can beside the drink poured over ice.`}
+          loading="lazy"
+        />
+      </figure>
+      <a class="drink__next" href={`${base}/drinks/${next.key}`}>
+        <img src={`${base}/cans/${next.key}.png`} alt="" width="720" height="1130" loading="lazy" />
+        <span>
+          <span class="drink__next-lead">If you enjoyed the {drink.short}, try the</span>
+          <span class="sc-display sc-display--md">{next.short}</span>
+          <span class="drink__next-line">{next.country}. {next.line}</span>
+        </span>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    import { drinkByKey } from '../../data/drinks.js';
+    const host = document.querySelector('[data-viewer]');
+    if (host) {
+      const base = (document.documentElement.dataset.base || '').replace(/\/$/, '');
+      const start = async () => {
+        try {
+          const [{ mountViewer }, data] = await Promise.all([
+            import('../../scripts/scene/viewer.js'),
+            import('../../data/globe-dots.json').then((m) => m.default),
+          ]);
+          await mountViewer({
+            host,
+            canvas: host.querySelector('canvas'),
+            drink: drinkByKey[host.dataset.viewer],
+            data,
+            base,
+          });
+        } catch (err) {
+          console.warn('[around] 3D can did not start; the still image stays.', err);
+        }
+      };
+      if (document.readyState === 'complete') start();
+      else addEventListener('load', start, { once: true });
+    }
+  </script>
+</Base>
