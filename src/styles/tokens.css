@@ -144,8 +144,6 @@ body { min-height: 100vh; }
   font-size: var(--sc-t-xs);
   font-variant-numeric: tabular-nums;
 }
-/* On the home page the cart stays out of the way until it holds something. */
-.bar:not(.bar--solid) .bar__cart:not(.has-items) { display: none; }
 .bar__cart.has-items .bar__count { background: var(--sc-ink); color: var(--sc-canvas); border-color: var(--sc-ink); }
 
 /* Wordmark: AR + dot globe + UND. */
@@ -195,10 +193,10 @@ body { min-height: 100vh; }
 .site-foot button:hover { border-color: var(--sc-ink-soft); }
 .site-foot__note { margin: 0; max-width: 46ch; }
 
-/* Phone: the bar has room for the wordmark, Shop and Cart. The button would
-   push them off the edge, and "Shop" already goes to the same place. */
+/* Phone: the bar has room for the wordmark, Cart and Menu. The button would
+   push them off the edge, and "Shop" in the menu goes to the same place. */
 @media (max-width: 860px) {
-  .bar--solid .cta { display: none; }
+  .bar .cta { display: none; }
   .bar__links { display: none; }
   .bar__menu { display: block; }
   .bar__nav { gap: var(--sc-4); }

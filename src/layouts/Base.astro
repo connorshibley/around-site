@@ -43,24 +43,20 @@ const links = [
     <header class={`bar ${home ? '' : 'bar--solid'}`}>
       <a class="bar__mark" href={`${base}/`}><Wordmark /></a>
       <nav class="bar__nav" aria-label="Main">
-        {!home && (
-          <div class="bar__links">
-            {links.map((l) => <a class="bar__link" href={l.href}>{l.label}</a>)}
-          </div>
-        )}
+        <div class="bar__links">
+          {links.map((l) => <a class="bar__link" href={l.href}>{l.label}</a>)}
+        </div>
         <a class="bar__link bar__cart" href={`${base}/cart`} data-cart-link aria-label="Cart, 0 packs">
           Cart <span class="bar__count" data-cart-count aria-hidden="true">0</span>
         </a>
         {cta && <a class="cta cta--small" href={`${base}/shop`}>Shop the cans</a>}
         {/* Phone only: the same links, folded away. Works without JavaScript. */}
-        {!home && (
-          <details class="bar__menu" data-menu>
-            <summary class="bar__link">Menu</summary>
-            <div class="bar__sheet">
-              {links.map((l) => <a href={l.href}>{l.label}</a>)}
-            </div>
-          </details>
-        )}
+        <details class="bar__menu" data-menu>
+          <summary class="bar__link">Menu</summary>
+          <div class="bar__sheet">
+            {links.map((l) => <a href={l.href}>{l.label}</a>)}
+          </div>
+        </details>
       </nav>
     </header>
     <slot />
