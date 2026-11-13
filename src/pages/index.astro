@@ -69,6 +69,7 @@ const sides = ['lead', 'trail', 'lead'];
             <li>Recipes with a home town.</li>
             <li>Not too sweet.</li>
           </ul>
+          <p class="substance__more"><a class="text-link" href={`${base}/map`}>See them on the map</a></p>
         </div>
         <figure class="substance__map" data-sc-reveal="left" data-sc-reveal-at="0.16 0.52">
           {drinks.map((d) => (
@@ -118,6 +119,8 @@ const sides = ['lead', 'trail', 'lead'];
           <p class="site-foot__note">Ar0und is a class concept for MGMT 210. Nothing on this site is for sale.</p>
           <nav aria-label="Site">
             <a href={`${base}/shop`}>Shop</a>
+            <a href={`${base}/map`}>Map</a>
+            <a href={`${base}/rewards`}>Rewards</a>
             <a href={`${base}/cart`}>Cart</a>
             <button type="button" data-motion-toggle aria-pressed="false">Motion: on</button>
           </nav>

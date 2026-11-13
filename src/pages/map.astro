@@ -1,0 +1,128 @@
+---
+import Base from '../layouts/Base.astro';
+import { drinks } from '../data/drinks.js';
+import '../styles/inner.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base
+  title="Region map. Ar0und."
+  description="Where each Ar0und drink comes from: Mexico, Italy and Japan on one globe."
+>
+  <main id="main" class="page">
+    <section class="sc-wrap atlas">
+      <div class="atlas__stage">
+        <div
+          class="globe-view"
+          data-map
+          tabindex="0"
+          role="img"
+          aria-label="A globe with Mexico, Italy and Japan marked. Drag it, or use the arrow keys, to turn it."
+        >
+          <img src={`${base}/posters/globe.svg`} alt="" width="1000" height="1000" />
+          <canvas></canvas>
+          <!-- The pins repeat the country buttons beside the globe, so they are
+               kept out of the tab order and away from screen readers. -->
+          {drinks.map((d) => (
+            <button type="button" class="globe-view__pin" data-pin={d.key} tabindex="-1" aria-hidden="true">
+              <span class="globe-view__dot"></span>
+              <span class="globe-view__name">{d.country}</span>
+            </button>
+          ))}
+        </div>
+        <p class="drink__hint" data-map-hint hidden>Drag to turn the globe</p>
+      </div>
+
+      <div class="atlas__panel">
+        <div class="atlas__intro sc-stack">
+          <p class="sc-label">Region map</p>
+          <h1 class="sc-display">Where each can comes from.</h1>
+          <p class="sc-lede">Every Ar0und starts as a drink people already order somewhere. Pick a country to see what we brought back.</p>
+        </div>
+
+        <div class="atlas__pick">
+        <div class="atlas__stops" role="group" aria-label="Choose a country" data-stops hidden>
+          {drinks.map((d) => (
+            <button type="button" class="atlas__stop" data-stop={d.key} aria-pressed="false">{d.country}</button>
+          ))}
+        </div>
+
+        <!-- All three are in the page; the script shows one at a time. Without
+             JavaScript they simply stack. -->
+        <div class="atlas__cards" aria-live="polite">
+          {drinks.map((d) => (
+            <article class="stop-card" data-card={d.key}>
+              <img src={`${base}/cans/${d.key}.png`} alt="" width="720" height="1130" />
+              <div class="stop-card__copy">
+                <h2 class="sc-display sc-display--md">{d.country}</h2>
+                <p class="stop-card__name">{d.name}</p>
+                <p class="stop-card__line">{d.line}</p>
+                <p class="stop-card__taste">{d.taste}</p>
+                <p class="stop-card__go"><a class="cta" href={`${base}/drinks/${d.key}`}>See the {d.short}</a></p>
+              </div>
+            </article>
+          ))}
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    import { drinks } from '../data/drinks.js';
+
+    const host = document.querySelector('[data-map]');
+    const stops = document.querySelector('[data-stops]');
+    const keys = drinks.map((d) => d.key);
+    let map = null;
+    let current = null;
+
+    // Show one stop: its card, its button, and (once the globe is running) its
+    // side of the world. `/map#italy` opens on Italy.
+    function show(key, { instant = false, fromGlobe = false } = {}) {
+      if (!keys.includes(key)) return;
+      current = key;
+      document.querySelectorAll('[data-card]').forEach((el) => {
+        el.hidden = el.dataset.card !== key;
+      });
+      document.querySelectorAll('[data-stop]').forEach((el) => {
+        el.setAttribute('aria-pressed', el.dataset.stop === key ? 'true' : 'false');
+      });
+      if (map && !fromGlobe) map.select(key, { instant });
+      try {
+        history.replaceState(null, '', `#${key}`);
+      } catch (e) {}
+    }
+
+    stops.hidden = false;
+    stops.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-stop]');
+      if (btn) show(btn.dataset.stop);
+    });
+    addEventListener('hashchange', () => show(location.hash.slice(1)));
+    show(keys.includes(location.hash.slice(1)) ? location.hash.slice(1) : keys[0], { instant: true });
+
+    const start = async () => {
+      try {
+        const [{ mountMap }, data] = await Promise.all([
+          import('../scripts/scene/map.js'),
+          import('../data/globe-dots.json').then((m) => m.default),
+        ]);
+        map = mountMap({
+          host,
+          canvas: host.querySelector('canvas'),
+          stops: drinks.map((d) => ({ key: d.key, tag: d.tag, lat: d.lat, lon: d.lon })),
+          dots: data.globe,
+          onPick: (key) => show(key, { fromGlobe: true }),
+        });
+        if (map) {
+          document.querySelector('[data-map-hint]').hidden = false;
+          map.select(current); // swing round from the still image's view
+        }
+      } catch (err) {
+        console.warn('[around] The live globe did not start; the still image stays.', err);
+      }
+    };
+    if (document.readyState === 'complete') start();
+    else addEventListener('load', start, { once: true });
+  </script>
+</Base>

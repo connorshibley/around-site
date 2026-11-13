@@ -12,15 +12,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <h2 class="order__summary-title">What you picked</h2>
         <ul class="order__mini" data-done-lines></ul>
         <dl>
+          <div data-done-discount hidden><dt>Rewards</dt><dd data-done-discount-amount></dd></div>
           <div class="order__total"><dt>Total</dt><dd data-done-total></dd></div>
         </dl>
+        <p class="order__reward" data-done-points hidden></p>
       </div>
+      <p data-done-club hidden><a class="text-link" href={`${base}/rewards`}>See your points and passport</a></p>
+      <p data-done-join hidden><a class="text-link" href={`${base}/rewards`}>Join the rewards club</a> to earn points next time.</p>
       <p><a class="text-link" href={`${base}/`}>Back to the start</a></p>
     </section>
   </main>
 
   <script>
     import { formatMoney } from '../../lib/cart.js';
+    import { club } from '../../scripts/rewards-store.js';
     let order = null;
     try {
       order = JSON.parse(sessionStorage.getItem('around-last-order'));
@@ -36,7 +41,23 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         li.append(name, price);
         list.append(li);
       }
-      document.querySelector('[data-done-total]').textContent = formatMoney(Number(order.totals && order.totals.subtotalCents) || 0);
+      const subtotal = Number(order.totals && order.totals.subtotalCents) || 0;
+      const discount = Number(order.discountCents) || 0;
+      const total = Number.isFinite(Number(order.totalCents)) && order.totalCents !== undefined ? Number(order.totalCents) : subtotal;
+      document.querySelector('[data-done-total]').textContent = formatMoney(total);
+      if (discount > 0) {
+        document.querySelector('[data-done-discount]').hidden = false;
+        document.querySelector('[data-done-discount-amount]').textContent = `−${formatMoney(discount)}`;
+      }
+      if (order.member === true) {
+        const earned = Number(order.earned) || 0;
+        const points = document.querySelector('[data-done-points]');
+        points.textContent = `You earned ${earned} ${earned === 1 ? 'point' : 'points'}. Your balance is ${club.get().points}.`;
+        points.hidden = false;
+        document.querySelector('[data-done-club]').hidden = false;
+      } else {
+        document.querySelector('[data-done-join]').hidden = false;
+      }
       document.querySelector('[data-done]').hidden = false;
     }
   </script>

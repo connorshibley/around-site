@@ -88,6 +88,7 @@ main { position: relative; z-index: 1; }
   padding-top: var(--sc-3);
   border-top: 1px solid var(--sc-hairline);
 }
+.substance__more { margin-top: var(--sc-5); }
 .substance__map {
   margin: 0;
   display: grid;

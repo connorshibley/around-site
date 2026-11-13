@@ -233,6 +233,7 @@
 .order__summary-title { margin: 0; font-size: var(--sc-t-lg); font-weight: 650; }
 .order__summary dl { margin: 0; display: grid; gap: var(--sc-3); }
 .order__summary dl > div { display: flex; justify-content: space-between; gap: var(--sc-5); }
+.order__summary dl > div[hidden] { display: none; }
 .order__summary dt { color: var(--sc-ink-soft); }
 .order__summary dd { margin: 0; font-variant-numeric: tabular-nums; text-align: right; }
 .order__total { padding-top: var(--sc-3); border-top: 1px solid var(--sc-hairline); font-weight: 700; font-size: var(--sc-t-lg); }
@@ -270,6 +271,172 @@
 .checkout__error[hidden] { display: none; }
 .checkout__demo { margin: 0; padding: var(--sc-4) var(--sc-5); border: 1px dashed var(--sc-hairline-strong); border-radius: var(--sc-r-md); color: var(--sc-ink-soft); }
 
+/* ---- region map ------------------------------------------------------------ */
+.atlas {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: var(--sc-8);
+  align-items: center;
+}
+.globe-view {
+  position: relative;
+  width: min(100%, 72vh);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  /* a warm glow behind the planet, so it sits in the page instead of on it */
+  background: radial-gradient(closest-side, color-mix(in oklab, var(--ar-brick) 30%, transparent), transparent 100%);
+  border-radius: 50%;
+}
+.globe-view.is-dragging { cursor: grabbing; }
+.globe-view > img,
+.globe-view > canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.globe-view > img { transition: opacity 400ms var(--sc-ease-out); }
+.globe-view > canvas { opacity: 0; transition: opacity 400ms var(--sc-ease-out); }
+.globe-view.is-live > canvas { opacity: 1; }
+.globe-view.is-live > img { opacity: 0; }
+
+/* A pin is anchored by its dot: the script moves the button's top-left corner
+   to the country, and the negative margin centres the 2.75rem dot box on it. */
+.globe-view__pin {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: -1.375rem 0 0 -1.375rem;
+  display: none;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transition: opacity 200ms var(--sc-ease-out);
+}
+.globe-view.is-live .globe-view__pin { display: inline-flex; }
+.globe-view__pin.is-behind { opacity: 0; pointer-events: none; }
+.globe-view__dot { width: 2.75rem; height: 2.75rem; display: grid; place-items: center; flex: none; }
+.globe-view__dot::before {
+  content: "";
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  border: 2px solid var(--sc-ink);
+  background: var(--sc-canvas);
+  transition: transform var(--sc-d-fast) var(--sc-ease-out), background-color var(--sc-d-fast) var(--sc-ease-out);
+}
+.globe-view__pin:hover .globe-view__dot::before { transform: scale(1.25); }
+.globe-view__pin.is-on .globe-view__dot::before { background: var(--sc-accent); border-color: var(--sc-accent); transform: scale(1.25); }
+.globe-view__name {
+  margin-left: -0.35rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--sc-r-sm);
+  background: color-mix(in oklab, var(--sc-canvas) 82%, transparent);
+  border: 1px solid var(--sc-hairline-strong);
+  font-size: var(--sc-t-xs);
+  font-weight: 650;
+  letter-spacing: var(--sc-track-wide);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.globe-view__pin.is-on .globe-view__name { background: var(--sc-ink); color: var(--sc-canvas); border-color: var(--sc-ink); }
+
+.page .atlas__intro h1.sc-display { font-size: var(--sc-t-2xl); }
+.atlas__stops { display: flex; flex-wrap: wrap; gap: var(--sc-2); margin-top: var(--sc-6); }
+.atlas__stops[hidden] { display: none; }
+.atlas__stop {
+  min-height: 2.75rem;
+  padding: 0 var(--sc-4);
+  border: 1px solid var(--sc-hairline-strong);
+  border-radius: var(--sc-r-md);
+  background: none;
+  cursor: pointer;
+  font-size: var(--sc-t-sm);
+  font-weight: 600;
+  transition: border-color var(--sc-d-fast) var(--sc-ease-out), background-color var(--sc-d-fast) var(--sc-ease-out);
+}
+.atlas__stop:hover { border-color: var(--sc-ink-soft); }
+.atlas__stop[aria-pressed="true"] { border-color: var(--sc-ink); background: var(--sc-surface); }
+.atlas__cards { display: grid; gap: var(--sc-5); margin-top: var(--sc-5); }
+.stop-card {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: var(--sc-5);
+  align-items: center;
+  padding: var(--sc-5);
+  background: var(--sc-surface);
+  border-radius: var(--sc-r-lg);
+  box-shadow: var(--sc-e2), var(--sc-edge);
+}
+.stop-card[hidden] { display: none; }
+.stop-card img { width: 100%; height: auto; }
+.stop-card__copy { display: grid; gap: var(--sc-2); justify-items: start; }
+.stop-card__copy > * { margin: 0; }
+.stop-card__name { font-weight: 650; }
+.stop-card__line { color: var(--sc-ink-soft); font-size: var(--sc-t-sm); }
+.stop-card__taste { font-size: var(--sc-t-sm); }
+.stop-card__go { margin-top: var(--sc-3); }
+
+/* ---- rewards club ---------------------------------------------------------- */
+.club {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: var(--sc-8);
+  align-items: center;
+}
+.club__head h1.sc-display { font-size: var(--sc-t-2xl); }
+.club__card {
+  display: grid;
+  gap: var(--sc-4);
+  justify-items: start;
+  padding: var(--sc-7) var(--sc-6);
+  background: var(--ar-brick-deep);
+  border-radius: var(--sc-r-lg);
+  box-shadow: var(--sc-e3), var(--sc-edge);
+}
+.club__card[hidden] { display: none; }
+.club__card > * { margin: 0; }
+.club__title { font-family: var(--sc-font-display); font-size: var(--sc-t-xl); font-weight: 480; line-height: 1.1; }
+.club__text { color: color-mix(in oklab, var(--sc-ink) 82%, transparent); }
+.club__label { font-size: var(--sc-t-xs); letter-spacing: var(--sc-track-wide); text-transform: uppercase; color: color-mix(in oklab, var(--sc-ink) 82%, transparent); }
+.club__points { font-family: var(--sc-font-display); font-size: var(--sc-t-4xl); line-height: 0.9; font-variant-numeric: tabular-nums; }
+.club__meter { width: 100%; height: 0.5rem; border-radius: var(--sc-r-pill); background: color-mix(in oklab, var(--sc-ink) 18%, transparent); overflow: clip; }
+.club__meter span { display: block; height: 100%; width: 0; background: var(--sc-ink); border-radius: inherit; transition: width var(--sc-d-slow) var(--sc-ease-out); }
+.club__card .order__remove { color: color-mix(in oklab, var(--sc-ink) 82%, transparent); }
+
+.passport__stamps { list-style: none; margin: var(--sc-7) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sc-6); }
+.stamp { display: grid; gap: var(--sc-2); justify-items: center; text-align: center; }
+.stamp > * { margin: 0; }
+.stamp__mark {
+  width: min(100%, 12rem);
+  aspect-ratio: 1;
+  position: relative;
+  margin-bottom: var(--sc-3);
+  border-radius: 50%;
+  border: 2px dashed var(--sc-hairline-strong);
+  color: color-mix(in oklab, var(--sc-ink) 30%, transparent);
+  transition: color var(--sc-d-base) var(--sc-ease-out), border-color var(--sc-d-base) var(--sc-ease-out), rotate var(--sc-d-base) var(--sc-ease-out);
+}
+/* The map fills the stamp whichever way the country runs: Mexico is wide,
+   Italy and Japan are tall. */
+.stamp__mark .country-dots { position: absolute; inset: 17%; width: 66%; height: 66%; max-height: none; }
+.stamp.is-stamped .stamp__mark { color: var(--sc-ink); border: 2px solid var(--sc-ink); background: var(--ar-brick-deep); rotate: -6deg; }
+.stamp__country { font-family: var(--sc-font-display); font-size: var(--sc-t-lg); font-weight: 480; }
+.stamp__state { font-size: var(--sc-t-xs); letter-spacing: var(--sc-track-wide); text-transform: uppercase; color: var(--sc-ink-soft); }
+.stamp.is-stamped .stamp__state { color: var(--sc-ink); }
+
+.club__steps { margin: var(--sc-5) 0 0; padding: 0; list-style: none; counter-reset: step; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sc-6); }
+.club__steps li { padding-top: var(--sc-4); border-top: 1px solid var(--sc-hairline); }
+
+/* Rewards rows in the checkout and on the confirmation page. */
+.order__reward { display: grid; gap: var(--sc-2); padding-top: var(--sc-4); border-top: 1px solid var(--sc-hairline); font-size: var(--sc-t-sm); }
+.order__reward[hidden] { display: none; }
+.order__reward > * { margin: 0; }
+.order__reward label { display: flex; align-items: center; gap: var(--sc-3); min-height: 2.75rem; font-weight: 600; cursor: pointer; }
+.order__reward input { width: 1.25rem; height: 1.25rem; accent-color: var(--sc-ink); flex: none; }
+.order__reward [hidden] { display: none; }
+
 /* ---- phone ----------------------------------------------------------------- */
 @media (max-width: 860px) {
   .drink,
@@ -285,4 +452,19 @@
   .order__price { grid-column: 2; }
   .quiz__pick { grid-template-columns: 5rem minmax(0, 1fr); }
   .bar__nav { gap: var(--sc-4); }
+  .atlas,
+  .club { grid-template-columns: 1fr; gap: var(--sc-6); }
+  /* On a phone the words come first, then the globe. */
+  .atlas__stage { order: 2; }
+  .atlas__panel { display: contents; }
+  .atlas__intro { order: 1; }
+  .atlas__pick { order: 3; }
+  .globe-view { width: min(100%, 58vh); }
+  .stop-card { grid-template-columns: 5.5rem minmax(0, 1fr); padding: var(--sc-4); }
+  /* Three across is too tight on a phone: one stamp per row, mark on the left. */
+  .passport__stamps { grid-template-columns: 1fr; gap: var(--sc-5); }
+  .stamp { grid-template-columns: 5.5rem minmax(0, 1fr); column-gap: var(--sc-5); justify-items: start; align-content: center; text-align: left; }
+  .stamp__mark { grid-row: 1 / span 3; width: 5.5rem; margin-bottom: 0; align-self: center; }
+  .club__steps { grid-template-columns: 1fr; gap: var(--sc-4); }
+  .club__card { padding: var(--sc-6) var(--sc-5); }
 }

@@ -1,0 +1,126 @@
+---
+import Base from '../layouts/Base.astro';
+import CountryDots from '../components/CountryDots.astro';
+import { drinks } from '../data/drinks.js';
+import { rules } from '../data/rewards.js';
+import { formatMoney } from '../lib/cart.js';
+import '../styles/inner.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const off = formatMoney(rules.rewardCents);
+const perDollar = rules.pointsPerDollar === 1 ? '1 point' : `${rules.pointsPerDollar} points`;
+---
+<Base
+  title="Rewards club (demo). Ar0und."
+  description="The Ar0und rewards club: earn points on every pack and spend them on the next one."
+>
+  <main id="main" class="page">
+    <section class="sc-wrap club">
+      <div class="club__head sc-stack">
+        <p class="sc-label">Rewards club</p>
+        <h1 class="sc-display">Earn points on every pack. Spend them on the next one.</h1>
+        <p class="sc-lede">{perDollar} for every $1 you spend. {rules.rewardPoints} points takes {off} off an order.</p>
+        <p class="order__banner">
+          <strong>This is a demo club.</strong> There is no account and no sign-up form. Your points are kept in
+          this browser only, and nothing is sent anywhere.
+        </p>
+      </div>
+
+      <div class="club__card" data-club-guest>
+        <h2 class="club__title">Join and start with {rules.welcomePoints} points.</h2>
+        <p class="club__text">One tap. Nothing to fill in.</p>
+        <button type="button" class="cta" data-club-join>Join the club</button>
+        <noscript><p class="club__text">Joining needs JavaScript switched on in your browser.</p></noscript>
+      </div>
+
+      <div class="club__card" data-club-member hidden>
+        <p class="club__label">Your points</p>
+        <p class="club__points" data-club-points>0</p>
+        <div class="club__meter" role="progressbar" aria-label="Progress to your next reward" aria-valuemin="0" aria-valuemax={rules.rewardPoints} aria-valuenow="0" data-club-meter>
+          <span></span>
+        </div>
+        <p class="club__text" data-club-next></p>
+        <a class="cta" href={`${base}/shop`}>Shop the cans</a>
+        <button type="button" class="order__remove" data-club-leave>Leave the club and clear my points</button>
+      </div>
+    </section>
+
+    <section class="sc-wrap sc-section passport">
+      <div class="sc-stack passport__head">
+        <h2 class="sc-display sc-display--lg">Your passport.</h2>
+        <p class="sc-body" data-passport-line>A stamp for every country you try. Three to collect so far.</p>
+      </div>
+      <ul class="passport__stamps">
+        {drinks.map((d) => (
+          <li class="stamp" data-stamp={d.key}>
+            <div class="stamp__mark"><CountryDots country={d.key} /></div>
+            <h3 class="stamp__country">{d.country}</h3>
+            <p class="stamp__state" data-stamp-state>Not stamped yet</p>
+            <a class="text-link" href={`${base}/drinks/${d.key}`}>See the {d.short}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="sc-wrap club__how">
+      <h2 class="sc-display sc-display--md">How it works</h2>
+      <ol class="club__steps">
+        <li><strong>Join.</strong> You start with {rules.welcomePoints} points.</li>
+        <li><strong>Order.</strong> Every $1 you pay earns {perDollar}, and each country you try stamps your passport.</li>
+        <li><strong>Save.</strong> At checkout, trade {rules.rewardPoints} points for {off} off. One reward per order.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script>
+    import { club, rules } from '../scripts/rewards-store.js';
+    import { toNext } from '../lib/rewards.js';
+    import { formatMoney } from '../lib/cart.js';
+
+    const guest = document.querySelector('[data-club-guest]');
+    const memberBox = document.querySelector('[data-club-member]');
+    const live = document.querySelector('[data-live]');
+
+    function paint(member) {
+      guest.hidden = member.joined;
+      memberBox.hidden = !member.joined;
+      const off = formatMoney(rules.rewardCents);
+
+      document.querySelector('[data-club-points]').textContent = String(member.points);
+      const meter = document.querySelector('[data-club-meter]');
+      const toward = Math.min(member.points, rules.rewardPoints);
+      meter.setAttribute('aria-valuenow', String(toward));
+      meter.firstElementChild.style.width = `${(toward / rules.rewardPoints) * 100}%`;
+      const need = toNext(member, rules);
+      document.querySelector('[data-club-next]').textContent =
+        need === 0
+          ? `A ${off} reward is ready. Use it at checkout.`
+          : `${need} more ${need === 1 ? 'point' : 'points'} until ${off} off.`;
+
+      document.querySelectorAll('[data-stamp]').forEach((el) => {
+        const has = member.stamps.includes(el.dataset.stamp);
+        el.classList.toggle('is-stamped', has);
+        el.querySelector('[data-stamp-state]').textContent = has ? 'Stamped' : 'Not stamped yet';
+      });
+      const n = member.stamps.length;
+      document.querySelector('[data-passport-line]').textContent = !member.joined
+        ? 'A stamp for every country you try. Three to collect so far.'
+        : n === 3
+          ? 'All three stamped. That is the whole world tour, so far.'
+          : `A stamp for every country you try. ${n} of 3 so far.`;
+    }
+
+    document.querySelector('[data-club-join]').addEventListener('click', () => {
+      const member = club.join();
+      paint(member);
+      if (live) live.textContent = `You joined the club and have ${member.points} points.`;
+      memberBox.querySelector('a, button').focus();
+    });
+    document.querySelector('[data-club-leave]').addEventListener('click', () => {
+      paint(club.leave());
+      if (live) live.textContent = 'You left the club. Your points were cleared.';
+      guest.querySelector('button').focus();
+    });
+
+    paint(club.get());
+  </script>
+</Base>

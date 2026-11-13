@@ -90,6 +90,33 @@ body { min-height: 100vh; }
   gap: var(--sc-2);
 }
 .bar__link:hover { text-decoration: underline; text-underline-offset: 0.3em; }
+.bar__links { display: flex; align-items: center; gap: var(--sc-5); }
+/* The folded menu is for phones; wide screens show the links in the bar. */
+.bar__menu { display: none; position: relative; }
+.bar__menu summary { list-style: none; cursor: pointer; }
+.bar__menu summary::-webkit-details-marker { display: none; }
+.bar__sheet {
+  position: absolute;
+  right: 0;
+  top: calc(100% + var(--sc-2));
+  min-width: 11rem;
+  display: grid;
+  padding: var(--sc-2);
+  background: var(--sc-surface);
+  border-radius: var(--sc-r-md);
+  box-shadow: var(--sc-e3), var(--sc-edge);
+}
+.bar__sheet a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: var(--sc-4);
+  border-radius: var(--sc-r-sm);
+  color: var(--sc-ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+.bar__sheet a:hover { background: color-mix(in oklab, var(--sc-ink) 8%, transparent); }
 .bar__count {
   min-width: 1.5rem;
   height: 1.5rem;
@@ -156,6 +183,8 @@ body { min-height: 100vh; }
    push them off the edge, and "Shop" already goes to the same place. */
 @media (max-width: 860px) {
   .bar--solid .cta { display: none; }
+  .bar__links { display: none; }
+  .bar__menu { display: block; }
   .bar__nav { gap: var(--sc-4); }
   .site-foot { flex-direction: column; align-items: flex-start; }
 }

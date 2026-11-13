@@ -99,6 +99,20 @@ if (toggle) {
   });
 }
 
+// ---- phone menu ---------------------------------------------------------------
+const menu = document.querySelector('[data-menu]');
+if (menu) {
+  document.addEventListener('click', (e) => {
+    if (menu.open && !menu.contains(e.target)) menu.open = false;
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.open) {
+      menu.open = false;
+      menu.querySelector('summary').focus();
+    }
+  });
+}
+
 readCart();
 paintCount();
 // Another tab changed the cart: keep this one in step.

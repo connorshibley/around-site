@@ -43,6 +43,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <h2 class="sc-display sc-display--md">Where it comes from</h2>
         <p class="sc-body">{drink.origin}</p>
         <div class="drink__map"><CountryDots country={drink.key} /></div>
+        <p><a class="text-link" href={`${base}/map#${drink.key}`}>Find {drink.country} on the map</a></p>
       </div>
       <div class="sc-stack">
         <h2 class="sc-display sc-display--md">How it tastes</h2>
